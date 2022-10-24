@@ -1,0 +1,17 @@
+﻿namespace HogeschoolPXL.Data.DefaultData
+{
+    public class SeeData
+    {
+        public static void Populate(WebApplication app)
+        {
+            using (var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<HogeschoolPXLDbContext>())
+            {
+                //context.Database.ens
+                if (!context..any())
+                {
+
+                }
+            }
+        }
+    }
+}
