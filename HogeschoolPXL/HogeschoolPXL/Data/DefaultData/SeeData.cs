@@ -7,10 +7,10 @@
             using (var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<HogeschoolPXLDbContext>())
             {
                 //context.database.ens
-            //    if (!context..any())
-            //    {
+                if (!context.Student.Any())
+                {
 
-            //    }
+                }
             }
         }
     }
