@@ -4,7 +4,7 @@
     {
         public int GebruikerId { get; set; }
         public string Naam { get; set; }
-        public string NaamId { get; set; }
+        public string VoorNaam { get; set; }
         public string Email { get; set; }
     }
 }

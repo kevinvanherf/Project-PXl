@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/HogeschoolPXL.styles.css" asp-append-version="true" />
-    <script defer src="~/js/site.js"></script>
+    @*<script defer src="~/js/site.js"></script>*@
 </head>
 <body>
     <header>
@@ -25,6 +25,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Shared" asp-action="_LayoutIngelogt">Home</a>
                         </li>
                     </ul>
                 </div>
