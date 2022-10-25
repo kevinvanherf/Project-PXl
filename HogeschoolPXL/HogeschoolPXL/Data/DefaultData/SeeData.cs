@@ -6,11 +6,11 @@
         {
             using (var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<HogeschoolPXLDbContext>())
             {
-                //context.Database.ens
-                if (!context..any())
-                {
+                //context.database.ens
+            //    if (!context..any())
+            //    {
 
-                }
+            //    }
             }
         }
     }

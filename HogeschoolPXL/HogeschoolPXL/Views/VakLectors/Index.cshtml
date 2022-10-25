@@ -1,0 +1,41 @@
+﻿@model IEnumerable<HogeschoolPXL.Models.VakLector>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LectorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VakId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LectorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VakId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.vakLectorId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.vakLectorId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.vakLectorId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

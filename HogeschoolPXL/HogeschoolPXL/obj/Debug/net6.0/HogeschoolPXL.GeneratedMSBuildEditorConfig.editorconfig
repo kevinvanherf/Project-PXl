@@ -15,6 +15,46 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\projecten c#\web\project\Project-PXl\HogeschoolPXL\HogeschoolPXL
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VicnVpa2Vyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VicnVpa2Vyc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VicnVpa2Vyc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VicnVpa2Vyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VicnVpa2Vyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZGJvZWtzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZGJvZWtzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZGJvZWtzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZGJvZWtzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZGJvZWtzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -23,12 +63,112 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY2hyaWp2aW5nc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY2hyaWp2aW5nc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY2hyaWp2aW5nc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY2hyaWp2aW5nc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY2hyaWp2aW5nc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdG9yc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdG9yc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdG9yc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdG9yc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdG9yc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrTGVjdG9yc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrTGVjdG9yc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrTGVjdG9yc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrTGVjdG9yc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrTGVjdG9yc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/_ViewImports.cshtml]

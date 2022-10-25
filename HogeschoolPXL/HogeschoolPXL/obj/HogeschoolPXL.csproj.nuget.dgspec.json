@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\LAPTOP-RV6QHERT\\project\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj": {}
+    "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj": {}
   },
   "projects": {
-    "\\\\LAPTOP-RV6QHERT\\project\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj": {
+    "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\LAPTOP-RV6QHERT\\project\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj",
+        "projectUniqueName": "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj",
         "projectName": "HogeschoolPXL",
-        "projectPath": "\\\\LAPTOP-RV6QHERT\\project\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj",
+        "projectPath": "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj",
         "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "\\\\LAPTOP-RV6QHERT\\project\\HogeschoolPXL\\HogeschoolPXL\\obj\\",
+        "outputPath": "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,6 +54,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.10, )"
             }
           },
           "imports": [
@@ -75,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
