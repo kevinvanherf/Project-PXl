@@ -76,7 +76,7 @@ namespace HogeschoolPXL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("KostPrijs")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(8,2)");
 
                     b.Property<string>("Titel")
                         .IsRequired()
