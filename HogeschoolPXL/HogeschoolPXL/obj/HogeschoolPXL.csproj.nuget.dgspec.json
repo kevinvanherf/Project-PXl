@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj": {}
+    "C:\\Users\\kevin\\Documents\\pxl_cursussen\\2022-2023\\c# web projecten\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj": {}
   },
   "projects": {
-    "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj": {
+    "C:\\Users\\kevin\\Documents\\pxl_cursussen\\2022-2023\\c# web projecten\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\Documents\\pxl_cursussen\\2022-2023\\c# web projecten\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj",
         "projectName": "HogeschoolPXL",
-        "projectPath": "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj",
+        "projectPath": "C:\\Users\\kevin\\Documents\\pxl_cursussen\\2022-2023\\c# web projecten\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj",
         "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\obj\\",
+        "outputPath": "C:\\Users\\kevin\\Documents\\pxl_cursussen\\2022-2023\\c# web projecten\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
