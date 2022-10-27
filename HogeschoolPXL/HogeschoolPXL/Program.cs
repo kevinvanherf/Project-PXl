@@ -1,4 +1,5 @@
 using HogeschoolPXL.Data;
+using HogeschoolPXL.Data.DefaultData;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,5 +30,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+SeeData.Populate(app);
 
 app.Run();
