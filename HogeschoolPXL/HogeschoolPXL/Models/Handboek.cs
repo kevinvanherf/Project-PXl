@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using HogeschoolPXL.ModelValidations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HogeschoolPXL.Models
 {
@@ -8,6 +9,7 @@ namespace HogeschoolPXL.Models
         public string Titel { get; set; }
         [Column(TypeName = "decimal(8,2)")]
         public decimal KostPrijs { get; set; }
+        [UitGifteDate]
         public DateTime UitgifteDatum { get; set; }
         public string Afbeelding { get; set; }
 
