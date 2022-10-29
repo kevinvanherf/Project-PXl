@@ -1,11 +1,18 @@
-﻿namespace HogeschoolPXL.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace HogeschoolPXL.Models
 {
     public class Vak
     {
         public int VakId { get; set; }
-        public string VakNaam { get; set; }
+        [Required]
+        public string? VakNaam { get; set; }
+        [Required]
         public int StudiePunten { get; set; }
+        [Required]
         public int HandboekID { get; set; }
+
+        public Handboek? Handboek { get; set; }
 
     }
 }

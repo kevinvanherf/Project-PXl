@@ -164,6 +164,8 @@ namespace HogeschoolPXL.Migrations
 
                     b.HasKey("VakId");
 
+                    b.HasIndex("HandboekID");
+
                     b.ToTable("Vak");
                 });
 
@@ -184,6 +186,17 @@ namespace HogeschoolPXL.Migrations
                     b.HasKey("vakLectorId");
 
                     b.ToTable("VakLector");
+                });
+
+            modelBuilder.Entity("HogeschoolPXL.Models.Vak", b =>
+                {
+                    b.HasOne("HogeschoolPXL.Models.Handboek", "Handboek")
+                        .WithMany()
+                        .HasForeignKey("HandboekID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Handboek");
                 });
 #pragma warning restore 612, 618
         }
