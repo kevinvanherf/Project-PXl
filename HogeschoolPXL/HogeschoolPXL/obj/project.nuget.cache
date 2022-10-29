@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6UENiwxKxvQ9kRVbt5jCKebuB//samDzmvWt18OSNjIujs7MDD7+6yc4sKTzZqePxn2tA3e9fk8BOpj0O7kmAw==",
+  "dgSpecHash": "XzozVSuKWUAIk0w0wHkkrRZ7bB2hlXnZ9o0zSUdmS1RgJxP4XZ3FbSHYP3zssymdZoebHYVLu2gQbYJsY6HgZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kevin\\Documents\\pxl_cursussen\\2022-2023\\c# web projecten\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj",
+  "projectFilePath": "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\HogeschoolPXL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kevin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\kevin\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
