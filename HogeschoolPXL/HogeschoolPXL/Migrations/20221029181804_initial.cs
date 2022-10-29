@@ -38,22 +38,6 @@ namespace HogeschoolPXL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Handboek",
-                columns: table => new
-                {
-                    HandboekID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Titel = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    KostPrijs = table.Column<decimal>(type: "decimal(8,2)", nullable: false),
-                    UitgifteDatum = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Afbeelding = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Handboek", x => x.HandboekID);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Inschrijving",
                 columns: table => new
                 {
@@ -122,6 +106,33 @@ namespace HogeschoolPXL.Migrations
                 {
                     table.PrimaryKey("PK_VakLector", x => x.vakLectorId);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Handboek",
+                columns: table => new
+                {
+                    HandboekID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Titel = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    KostPrijs = table.Column<decimal>(type: "decimal(8,2)", nullable: false),
+                    UitgifteDatum = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Afbeelding = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    VakId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Handboek", x => x.HandboekID);
+                    table.ForeignKey(
+                        name: "FK_Handboek_Vak_VakId",
+                        column: x => x.VakId,
+                        principalTable: "Vak",
+                        principalColumn: "VakId");
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Handboek_VakId",
+                table: "Handboek",
+                column: "VakId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -145,10 +156,10 @@ namespace HogeschoolPXL.Migrations
                 name: "Student");
 
             migrationBuilder.DropTable(
-                name: "Vak");
+                name: "VakLector");
 
             migrationBuilder.DropTable(
-                name: "VakLector");
+                name: "Vak");
         }
     }
 }

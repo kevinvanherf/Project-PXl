@@ -85,7 +85,12 @@ namespace HogeschoolPXL.Migrations
                     b.Property<DateTime>("UitgifteDatum")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("VakId")
+                        .HasColumnType("int");
+
                     b.HasKey("HandboekID");
+
+                    b.HasIndex("VakId");
 
                     b.ToTable("Handboek");
                 });
@@ -184,6 +189,18 @@ namespace HogeschoolPXL.Migrations
                     b.HasKey("vakLectorId");
 
                     b.ToTable("VakLector");
+                });
+
+            modelBuilder.Entity("HogeschoolPXL.Models.Handboek", b =>
+                {
+                    b.HasOne("HogeschoolPXL.Models.Vak", null)
+                        .WithMany("Handboeks")
+                        .HasForeignKey("VakId");
+                });
+
+            modelBuilder.Entity("HogeschoolPXL.Models.Vak", b =>
+                {
+                    b.Navigation("Handboeks");
                 });
 #pragma warning restore 612, 618
         }
