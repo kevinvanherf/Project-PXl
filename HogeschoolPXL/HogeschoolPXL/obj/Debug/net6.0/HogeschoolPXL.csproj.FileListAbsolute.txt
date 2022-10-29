@@ -288,17 +288,6 @@ C:\projecten c#\web\project\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\ne
 C:\projecten c#\web\project\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.csproj.CopyComplete
 C:\projecten c#\web\project\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.genruntimeconfig.cache
 C:\projecten c#\web\project\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\ref\HogeschoolPXL.dll
-C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.csproj.AssemblyReference.cache
-C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.AssemblyInfoInputs.cache
-C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.AssemblyInfo.cs
-C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.csproj.CoreCompileInputs.cache
-C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.RazorAssemblyInfo.cache
-C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.RazorAssemblyInfo.cs
-C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.dll
-C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\refint\HogeschoolPXL.dll
-C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.pdb
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\bin\Debug\net6.0\appsettings.json
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\bin\Debug\net6.0\HogeschoolPXL.staticwebassets.runtime.json
@@ -544,11 +533,22 @@ C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\Ho
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.csproj.AssemblyReference.cache
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.AssemblyInfoInputs.cache
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.AssemblyInfo.cs
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.csproj.CoreCompileInputs.cache
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.RazorAssemblyInfo.cache
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.RazorAssemblyInfo.cs
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\scopedcss\bundle\HogeschoolPXL.styles.css
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\scopedcss\projectbundle\HogeschoolPXL.bundle.scp.css
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.csproj.CopyComplete
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.dll
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\refint\HogeschoolPXL.dll
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.pdb
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\HogeschoolPXL.genruntimeconfig.cache
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\obj\Debug\net6.0\ref\HogeschoolPXL.dll

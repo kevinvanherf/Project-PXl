@@ -7,16 +7,19 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HogeschoolPXL.Data;
 using HogeschoolPXL.Models;
+using Newtonsoft.Json.Linq;
+using NuGet.Common;
 
 namespace HogeschoolPXL.Controllers
 {
     public class VaksController : Controller
     {
-        private readonly HogeschoolPXLDbContext _context;
+        private  HogeschoolPXLDbContext _context;
 
         public VaksController(HogeschoolPXLDbContext context)
         {
             _context = context;
+            
         }
 
         // GET: Vaks
@@ -46,7 +49,8 @@ namespace HogeschoolPXL.Controllers
         // GET: Vaks/Create
         public IActionResult Create()
         {
-            ViewBag.boek = new SelectList(_context.Handboek, "HandboekID", "Titel");
+            ViewBag.Boek = new SelectList(_context.Handboek, "HandboekID", "Titel"); 
+            
             return View();
         }
 
@@ -63,6 +67,7 @@ namespace HogeschoolPXL.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.Boek = new SelectList(_context.Handboek, "HandboekID", "Titel");
             return View(vak);
         }
 
