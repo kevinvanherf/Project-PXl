@@ -9,9 +9,10 @@ namespace HogeschoolPXL.Models
         public int HandboekID { get; set; }
         [Required]
         public string Titel { get; set; }
-        [Required]
+        
+        [DataType(DataType.Currency)]
         [Column(TypeName = "decimal(8,2)")]
-        public decimal KostPrijs { get; set; }
+        public decimal? KostPrijs { get; set; }
         [UitGifteDate]
         public DateTime UitgifteDatum { get; set; }
         [Required]

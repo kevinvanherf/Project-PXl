@@ -15,7 +15,7 @@ namespace HogeschoolPXL.Data.DefaultData
                context.Gebruiker.AddRange(kevin, Kristof);
                     var Lector = new Lector { GebruikerId = 2 };
                     context.Lector.Add(Lector);
-                    var boek = new Handboek { Titel = "C# Web1", KostPrijs = 20, Afbeelding = "cWeb.jpg", UitgifteDatum = new DateTime(2021, 09, 16) };
+                    var boek = new Handboek { Titel = "C# Web1", KostPrijs = 20.99M, Afbeelding = "cWeb.jpg", UitgifteDatum = new DateTime(2021, 09, 16) };
                     context.Handboek.Add(boek);
                     var vak = new Vak { HandboekID = 1, StudiePunten = 6,  VakNaam = "C# Web1" };
                     context.Vak.Add(vak);

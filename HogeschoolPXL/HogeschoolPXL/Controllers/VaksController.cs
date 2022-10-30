@@ -49,8 +49,8 @@ namespace HogeschoolPXL.Controllers
         // GET: Vaks/Create
         public IActionResult Create()
         {
-            ViewBag.Boek = new SelectList(_context.Handboek, "HandboekID", "Titel"); 
-            
+            ViewBag.Boek = new SelectList(_context.Handboek, "HandboekID", "Titel");
+
             return View();
         }
 

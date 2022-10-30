@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="KostPrijs" class="control-label"></label>
-                <input asp-for="KostPrijs" class="form-control" />
+                <input asp-for="KostPrijs" class="form-control" step="any" />
                 <span asp-validation-for="KostPrijs" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -35,6 +35,7 @@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+            
         </form>
     </div>
 </div>
@@ -42,6 +43,10 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+
+
+
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
