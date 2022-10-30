@@ -44,9 +44,11 @@ namespace HogeschoolPXL.Controllers
         }
 
         // GET: Handboeks/Create
+        [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            var handboek = new NewHandboek();
+            return View(handboek);
         }
 
         // POST: Handboeks/Create
@@ -54,10 +56,11 @@ namespace HogeschoolPXL.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("HandboekID,Titel,KostPrijs,UitgifteDatum,Afbeelding")] Handboek handboek)
+        public async Task<IActionResult> Create([Bind("HandboekID,Titel,Price_string,UitgifteDatum,Afbeelding")] NewHandboek handboek)
         {
             if (ModelState.IsValid)
             {
+                handboek.KostPrijs = decimal.Parse(handboek.Price_string);
                 _context.Add(handboek);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -68,17 +71,23 @@ namespace HogeschoolPXL.Controllers
         // GET: Handboeks/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            var newHandboek = new NewHandboek();
             if (id == null || _context.Handboek == null)
             {
                 return NotFound();
             }
 
-            var handboek = await _context.Handboek.FindAsync(id);
+            var handboek =  await   _context.Handboek.FindAsync(id);
             if (handboek == null)
-            {
+            { 
                 return NotFound();
             }
-            return View(handboek);
+            newHandboek.HandboekID = handboek.HandboekID;
+            newHandboek.Titel = handboek.Titel;
+            newHandboek.UitgifteDatum= handboek.UitgifteDatum;
+            newHandboek.Afbeelding = handboek.Afbeelding;
+            newHandboek.Price_string = handboek.KostPrijs.ToString();
+            return View(newHandboek);
         }
 
         // POST: Handboeks/Edit/5
@@ -86,7 +95,7 @@ namespace HogeschoolPXL.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("HandboekID,Titel,KostPrijs,UitgifteDatum,Afbeelding")] Handboek handboek)
+        public async Task<IActionResult> Edit(int id, [Bind("HandboekID,Titel,Price_string,UitgifteDatum,Afbeelding")] NewHandboek handboek)
         {
             if (id != handboek.HandboekID)
             {
@@ -97,6 +106,7 @@ namespace HogeschoolPXL.Controllers
             {
                 try
                 {
+                    handboek.KostPrijs = decimal.Parse(handboek.Price_string);
                     _context.Update(handboek);
                     await _context.SaveChangesAsync();
                 }
