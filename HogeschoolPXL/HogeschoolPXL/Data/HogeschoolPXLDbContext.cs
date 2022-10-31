@@ -16,7 +16,6 @@ namespace HogeschoolPXL.Data
         public DbSet<HogeschoolPXL.Models.VakLector> VakLector { get; set; }
         public DbSet<HogeschoolPXL.Models.AcademieJaar> AcademieJaar { get; set; }
         public DbSet<HogeschoolPXL.Models.Handboek> Handboek { get; set; }
-       ///* public DbSet<HogeschoolPXL.Models.NewHandboek> NewHandboek { get; set; */}
 
 
     }

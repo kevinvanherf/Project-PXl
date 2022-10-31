@@ -84,6 +84,7 @@ namespace HogeschoolPXL.Controllers
             {
                 return NotFound();
             }
+            ViewBag.Boek = new SelectList(_context.Handboek, "HandboekID", "Titel");
             return View(vak);
         }
 
@@ -119,6 +120,7 @@ namespace HogeschoolPXL.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.Boek = new SelectList(_context.Handboek, "HandboekID", "Titel");
             return View(vak);
         }
 
