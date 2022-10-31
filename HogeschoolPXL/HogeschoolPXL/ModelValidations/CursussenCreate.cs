@@ -6,8 +6,15 @@ namespace HogeschoolPXL.ModelValidations
     {
         public IEnumerable<ModelValidationResult> Validate(ModelValidationContext context)
         {
+            int aantal = 0;
+            var aantalboeken = 0;
             var lst = new List<ModelValidationResult>();
-            lst.Add(new ModelValidationResult("", "Datum is van uitgifte kan niet voor het huidige jaar zijn! "));
+            if (context.Model ==  null)
+            {
+                lst.Add(new ModelValidationResult("", "er bestaat geen boek dus kun je geen vak maken "));
+
+            }
+
             return lst;
         }
         

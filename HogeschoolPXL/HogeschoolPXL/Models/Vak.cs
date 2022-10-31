@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using HogeschoolPXL.ModelValidations;
+using System.ComponentModel.DataAnnotations;
 
 namespace HogeschoolPXL.Models
 {
@@ -9,8 +10,8 @@ namespace HogeschoolPXL.Models
         public string? VakNaam { get; set; }
         [Required]
         public int StudiePunten { get; set; }
-        [Required]
-        public int HandboekID { get; set; }
+        [CursussenCreate]
+        public int? HandboekID { get; set; }
 
         public Handboek? Handboek { get; set; }
 
