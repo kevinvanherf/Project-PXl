@@ -6,9 +6,9 @@ namespace HogeschoolPXL.ModelValidations
     {
         public IEnumerable<ModelValidationResult> Validate(ModelValidationContext context)
         {
-            var model = context.Model;
+            
             var lst = new List<ModelValidationResult>();
-            if (model == null)
+            if (context.Model == null)
             {
                 lst.Add(new ModelValidationResult("", "er bestaat geen vakken en of geen leerlingen  dus kun je geen vak maken "));
 

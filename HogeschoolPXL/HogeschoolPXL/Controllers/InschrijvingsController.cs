@@ -46,6 +46,7 @@ namespace HogeschoolPXL.Controllers
         // GET: Inschrijvings/Create
         public IActionResult Create()
         {
+            ViewBag.VakLector = new SelectList(_context.VakLector, "vakLectorId", "VakId");
             return View();
         }
 

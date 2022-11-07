@@ -19,6 +19,8 @@ namespace HogeschoolPXL.Data.DefaultData
                     context.Handboek.Add(boek);
                     var vak = new Vak { HandboekID = 1, StudiePunten = 6, VakNaam = "C# Web1" };
                     context.Vak.Add(vak);
+                    var vakLector = new VakLector { LectorId = 1, VakId = 1 };
+                    context.VakLector.Add(vakLector);
                     var student =  new Student { GebruikerId = 1 };
                     context.Student.Add(student);
                     var vakLeerkact = new VakLector { LectorId = 20007064, VakId = 1 };
