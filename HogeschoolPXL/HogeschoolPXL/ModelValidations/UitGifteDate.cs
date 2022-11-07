@@ -12,7 +12,7 @@ namespace HogeschoolPXL.ModelValidations
             if (DateTime.TryParse(context.Model.ToString(),out dtm))
             {
                 if (dtm > new DateTime(jaar, 1, 1))
-                    lst.Add(new ModelValidationResult("", "Datum is van uitgifte kan niet voor het huidige jaar zijn! "));
+                    lst.Add(new ModelValidationResult("", "Datum is van uitgifte kan niet voor het huidige jaar zijn! "));  
                 else if (dtm < new DateTime(1980, 1, 1))
                     lst.Add(new ModelValidationResult("", "datum van uitgifte is te oud moet voor 1980 zijn uitgegeven!"));
             }
