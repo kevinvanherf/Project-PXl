@@ -75,7 +75,7 @@ namespace HogeschoolPXL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("KostPrijs")
+                    b.Property<decimal?>("KostPrijs")
                         .HasColumnType("decimal(8,2)");
 
                     b.Property<string>("Titel")
@@ -108,6 +108,10 @@ namespace HogeschoolPXL.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("InschrijvingId");
+
+                    b.HasIndex("StudentId");
+
+                    b.HasIndex("VakLectorId");
 
                     b.ToTable("Inschrijving");
                 });
@@ -152,7 +156,7 @@ namespace HogeschoolPXL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VakId"), 1L, 1);
 
-                    b.Property<int>("HandboekID")
+                    b.Property<int?>("HandboekID")
                         .HasColumnType("int");
 
                     b.Property<int>("StudiePunten")
@@ -183,20 +187,64 @@ namespace HogeschoolPXL.Migrations
                     b.Property<int>("VakId")
                         .HasColumnType("int");
 
+                    b.Property<string>("VakNaam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("vakLectorId");
 
+                    b.HasIndex("LectorId");
+
+                    b.HasIndex("VakId");
+
                     b.ToTable("VakLector");
+                });
+
+            modelBuilder.Entity("HogeschoolPXL.Models.Inschrijving", b =>
+                {
+                    b.HasOne("HogeschoolPXL.Models.Student", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HogeschoolPXL.Models.VakLector", "vakLector")
+                        .WithMany()
+                        .HasForeignKey("VakLectorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Student");
+
+                    b.Navigation("vakLector");
                 });
 
             modelBuilder.Entity("HogeschoolPXL.Models.Vak", b =>
                 {
                     b.HasOne("HogeschoolPXL.Models.Handboek", "Handboek")
                         .WithMany()
-                        .HasForeignKey("HandboekID")
+                        .HasForeignKey("HandboekID");
+
+                    b.Navigation("Handboek");
+                });
+
+            modelBuilder.Entity("HogeschoolPXL.Models.VakLector", b =>
+                {
+                    b.HasOne("HogeschoolPXL.Models.Lector", "Lector")
+                        .WithMany()
+                        .HasForeignKey("LectorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Handboek");
+                    b.HasOne("HogeschoolPXL.Models.Vak", "vak")
+                        .WithMany()
+                        .HasForeignKey("VakId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lector");
+
+                    b.Navigation("vak");
                 });
 #pragma warning restore 612, 618
         }

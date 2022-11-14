@@ -10,10 +10,9 @@ namespace HogeschoolPXL.Models
         public int LectorId { get; set; }
         [Required]
         public int VakId { get; set; }
-
         public Lector? Lector { get; set; }
         public Vak? vak { get; set; }
        
-
+       
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HogeschoolPXL.Data;
 using HogeschoolPXL.Models;
+using System.Collections.Immutable;
 
 namespace HogeschoolPXL.Controllers
 {
@@ -46,7 +47,11 @@ namespace HogeschoolPXL.Controllers
         // GET: Inschrijvings/Create
         public IActionResult Create()
         {
-            ViewBag.VakLector = new SelectList(_context.VakLector, "vakLectorId", "VakId");
+            
+               
+            var name = _context.VakLector.Where(x => x.VakId == x.vak.VakId).Select(x => x.vak.VakNaam);
+
+            ViewBag.VakLector = new SelectList(_context.VakLector, "vakLectorId", "VakNaam");
             return View();
         }
 
