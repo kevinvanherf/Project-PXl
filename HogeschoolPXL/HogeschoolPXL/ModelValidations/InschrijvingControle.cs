@@ -7,6 +7,7 @@ namespace HogeschoolPXL.ModelValidations
     {
         public IEnumerable<ModelValidationResult> Validate(ModelValidationContext context , HogeschoolPXLDbContext contextdb)
         {
+            
             var lst = new List<ModelValidationResult>();
             if (contextdb.Student == null && contextdb.VakLector == null)
             {
@@ -22,9 +23,6 @@ namespace HogeschoolPXL.ModelValidations
                 lst.Add(new ModelValidationResult("", "er bestaat geen cursussen dus kun je geen inschrijving  maken ,maak eerst een cursus "));
 
             }
-
-
-
             return lst;
 
         }
