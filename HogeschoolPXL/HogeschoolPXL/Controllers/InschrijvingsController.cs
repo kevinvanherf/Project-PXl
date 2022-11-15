@@ -47,11 +47,16 @@ namespace HogeschoolPXL.Controllers
         // GET: Inschrijvings/Create
         public IActionResult Create()
         {
-            
-               
-            var name = _context.VakLector.Where(x => x.VakId == x.vak.VakId).Select(x => x.vak.VakNaam);
 
-            ViewBag.VakLector = new SelectList(_context.VakLector, "vakLectorId", "VakNaam");
+
+            var studentSelect = _context.Student.Where(x => x.GebruikerId == x.Gebruiker.GebruikerId)
+                .Select(x => new SelectListItem { Text = $"{x.Gebruiker.VoorNaam} {x.Gebruiker.Naam}", Value= x.StudentId.ToString() }); 
+            var VaklectorSelect = _context.VakLector.Where(_x => _x.VakId == _x.vak.VakId)
+                .Select(_x => new SelectListItem { Text = $"{_x.vak.VakNaam} - {_x.Lector.Gebruiker.VoorNaam} {_x.Lector.Gebruiker.Naam}" , Value = _x.vakLectorId.ToString() });
+            ViewData["VakLector"] = VaklectorSelect;
+            ViewData["Student"] = studentSelect;
+            ViewBag.AcademiJaar = new SelectList(_context.AcademieJaar, "AcademieJaarId", "StartDatum");
+            //ViewBag.VakLector = new SelectList(_context.VakLector, "vakLectorId", "VakId");
             return View();
         }
 

@@ -14,7 +14,7 @@
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="StudentId" class="control-label"></label>
-                <input asp-for="StudentId" class="form-control" />
+                 <select asp-for="StudentId" class="form-control" asp-items="ViewBag.Student" ></select>
                 <span asp-validation-for="StudentId" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="AcademieJaarId" class="control-label"></label>
-                <input asp-for="AcademieJaarId" class="form-control" />
+                <select asp-for="AcademieJaarId" class="form-control" asp-items="ViewBag.AcademiJaar" ></select>
                 <span asp-validation-for="AcademieJaarId" class="text-danger"></span>
             </div>
             <div class="form-group">
