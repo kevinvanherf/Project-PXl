@@ -23,10 +23,10 @@ namespace HogeschoolPXL.Data.DefaultData
                     context.VakLector.Add(vakLector);
                     var student =  new Student { GebruikerId = 1 };
                     context.Student.Add(student);
-                    var vakLeerkact = new VakLector { LectorId = 20007064, VakId = 1 };
+                    var vakLeerkact = new VakLector { LectorId = 1, VakId = 1 };
                     var academijar = new AcademieJaar { StartDatum = new DateTime(2021, 09, 20) };
                     context.AcademieJaar.Add(academijar);
-                    var inschrijving = new Inschrijving { AcademieJaarId = 1,  StudentId= 12100954, VakLectorId= 1 };
+                    var inschrijving = new Inschrijving { AcademieJaarId = 1,  StudentId= 1, VakLectorId= 1 };
                     context.Inschrijving.Add(inschrijving);
                     context.SaveChanges();  
                 }
