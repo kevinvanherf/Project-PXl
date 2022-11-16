@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HogeschoolPXL.Migrations
 {
     [DbContext(typeof(HogeschoolPXLDbContext))]
-    [Migration("20221029190213_initial")]
-    partial class initial
+    [Migration("20221116155410_migration")]
+    partial class migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -77,7 +77,7 @@ namespace HogeschoolPXL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("KostPrijs")
+                    b.Property<decimal?>("KostPrijs")
                         .HasColumnType("decimal(8,2)");
 
                     b.Property<string>("Titel")
@@ -111,6 +111,12 @@ namespace HogeschoolPXL.Migrations
 
                     b.HasKey("InschrijvingId");
 
+                    b.HasIndex("AcademieJaarId");
+
+                    b.HasIndex("StudentId");
+
+                    b.HasIndex("VakLectorId");
+
                     b.ToTable("Inschrijving");
                 });
 
@@ -126,6 +132,8 @@ namespace HogeschoolPXL.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("LectorId");
+
+                    b.HasIndex("GebruikerId");
 
                     b.ToTable("Lector");
                 });
@@ -143,6 +151,8 @@ namespace HogeschoolPXL.Migrations
 
                     b.HasKey("StudentId");
 
+                    b.HasIndex("GebruikerId");
+
                     b.ToTable("Student");
                 });
 
@@ -154,7 +164,7 @@ namespace HogeschoolPXL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VakId"), 1L, 1);
 
-                    b.Property<int>("HandboekID")
+                    b.Property<int?>("HandboekID")
                         .HasColumnType("int");
 
                     b.Property<int>("StudiePunten")
@@ -173,11 +183,11 @@ namespace HogeschoolPXL.Migrations
 
             modelBuilder.Entity("HogeschoolPXL.Models.VakLector", b =>
                 {
-                    b.Property<int>("vakLectorId")
+                    b.Property<int>("VakLectorId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("vakLectorId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VakLectorId"), 1L, 1);
 
                     b.Property<int>("LectorId")
                         .HasColumnType("int");
@@ -185,20 +195,90 @@ namespace HogeschoolPXL.Migrations
                     b.Property<int>("VakId")
                         .HasColumnType("int");
 
-                    b.HasKey("vakLectorId");
+                    b.HasKey("VakLectorId");
+
+                    b.HasIndex("LectorId");
+
+                    b.HasIndex("VakId");
 
                     b.ToTable("VakLector");
+                });
+
+            modelBuilder.Entity("HogeschoolPXL.Models.Inschrijving", b =>
+                {
+                    b.HasOne("HogeschoolPXL.Models.AcademieJaar", "academieJaar")
+                        .WithMany()
+                        .HasForeignKey("AcademieJaarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HogeschoolPXL.Models.Student", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HogeschoolPXL.Models.VakLector", "vakLector")
+                        .WithMany()
+                        .HasForeignKey("VakLectorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Student");
+
+                    b.Navigation("academieJaar");
+
+                    b.Navigation("vakLector");
+                });
+
+            modelBuilder.Entity("HogeschoolPXL.Models.Lector", b =>
+                {
+                    b.HasOne("HogeschoolPXL.Models.Gebruiker", "Gebruiker")
+                        .WithMany()
+                        .HasForeignKey("GebruikerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Gebruiker");
+                });
+
+            modelBuilder.Entity("HogeschoolPXL.Models.Student", b =>
+                {
+                    b.HasOne("HogeschoolPXL.Models.Gebruiker", "Gebruiker")
+                        .WithMany()
+                        .HasForeignKey("GebruikerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Gebruiker");
                 });
 
             modelBuilder.Entity("HogeschoolPXL.Models.Vak", b =>
                 {
                     b.HasOne("HogeschoolPXL.Models.Handboek", "Handboek")
                         .WithMany()
-                        .HasForeignKey("HandboekID")
+                        .HasForeignKey("HandboekID");
+
+                    b.Navigation("Handboek");
+                });
+
+            modelBuilder.Entity("HogeschoolPXL.Models.VakLector", b =>
+                {
+                    b.HasOne("HogeschoolPXL.Models.Lector", "Lector")
+                        .WithMany()
+                        .HasForeignKey("LectorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Handboek");
+                    b.HasOne("HogeschoolPXL.Models.Vak", "vak")
+                        .WithMany()
+                        .HasForeignKey("VakId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Lector");
+
+                    b.Navigation("vak");
                 });
 #pragma warning restore 612, 618
         }

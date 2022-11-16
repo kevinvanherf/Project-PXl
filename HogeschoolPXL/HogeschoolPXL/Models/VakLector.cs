@@ -5,7 +5,7 @@ namespace HogeschoolPXL.Models
 {
     public class VakLector
     {
-        public int vakLectorId { get; set; }
+        public int VakLectorId { get; set; }
         [Required]
         public int LectorId { get; set; }
         [Required]

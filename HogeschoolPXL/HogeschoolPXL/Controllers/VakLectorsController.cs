@@ -34,7 +34,7 @@ namespace HogeschoolPXL.Controllers
             }
 
             var vakLector = await _context.VakLector
-                .FirstOrDefaultAsync(m => m.vakLectorId == id);
+                .FirstOrDefaultAsync(m => m.VakLectorId == id);
             if (vakLector == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace HogeschoolPXL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("vakLectorId,LectorId,VakId")] VakLector vakLector)
         {
-            if (id != vakLector.vakLectorId)
+            if (id != vakLector.VakLectorId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace HogeschoolPXL.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!VakLectorExists(vakLector.vakLectorId))
+                    if (!VakLectorExists(vakLector.VakLectorId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace HogeschoolPXL.Controllers
             }
 
             var vakLector = await _context.VakLector
-                .FirstOrDefaultAsync(m => m.vakLectorId == id);
+                .FirstOrDefaultAsync(m => m.VakLectorId == id);
             if (vakLector == null)
             {
                 return NotFound();
@@ -155,7 +155,7 @@ namespace HogeschoolPXL.Controllers
 
         private bool VakLectorExists(int id)
         {
-          return _context.VakLector.Any(e => e.vakLectorId == id);
+          return _context.VakLector.Any(e => e.VakLectorId == id);
         }
     }
 }

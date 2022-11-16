@@ -23,7 +23,12 @@ namespace HogeschoolPXL.Controllers
         // GET: Inschrijvings
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Inschrijving.ToListAsync());
+              return View(await _context.Inschrijving
+                  .Include(x=> x.academieJaar)
+                  .Include(x=> x.vakLector).ThenInclude(v=> v.vak)
+                  .Include(x=> x.vakLector).ThenInclude(v=> v.Lector).ThenInclude(l=> l.Gebruiker)
+                  .Include(x=> x.Student).ThenInclude(s => s.Gebruiker)
+                  .ToListAsync());
         }
 
         // GET: Inschrijvings/Details/5
@@ -50,7 +55,7 @@ namespace HogeschoolPXL.Controllers
             var studentSelect = _context.Student.Where(x => x.GebruikerId == x.Gebruiker.GebruikerId)
                 .Select(x => new SelectListItem { Text = $"{x.Gebruiker.VoorNaam} {x.Gebruiker.Naam}", Value= x.StudentId.ToString() }); 
             var VaklectorSelect = _context.VakLector.Where(_x => _x.VakId == _x.vak.VakId)
-                .Select(_x => new SelectListItem { Text = $"{_x.vak.VakNaam} - {_x.Lector.Gebruiker.VoorNaam} {_x.Lector.Gebruiker.Naam}" , Value = _x.vakLectorId.ToString() });
+                .Select(_x => new SelectListItem { Text = $"{_x.vak.VakNaam} - {_x.Lector.Gebruiker.VoorNaam} {_x.Lector.Gebruiker.Naam}" , Value = _x.VakLectorId.ToString() });
             ViewData["VakLector"] = VaklectorSelect;
             ViewData["Student"] = studentSelect;
             ViewBag.AcademiJaar = new SelectList(_context.AcademieJaar, "AcademieJaarId", "StartDatum");
