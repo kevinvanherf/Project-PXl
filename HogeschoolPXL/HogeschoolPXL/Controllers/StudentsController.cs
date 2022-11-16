@@ -22,7 +22,9 @@ namespace HogeschoolPXL.Controllers
         // GET: Students
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Student.ToListAsync());
+              return View(await _context.Student
+                  .Include(x=> x.Gebruiker)
+                  .ToListAsync());
         }
 
         // GET: Students/Details/5

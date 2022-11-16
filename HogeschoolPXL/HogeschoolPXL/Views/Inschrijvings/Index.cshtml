@@ -31,10 +31,10 @@
                 @Html.DisplayFor(modelItem => item.Student.Gebruiker.VoorNaam ) @item.Student.Gebruiker.Naam
             </td>
             <td>
-              @Html.DisplayFor(modelItem => item.vakLector.Lector.Gebruiker.VoorNaam )  @item.vakLector.Lector.Gebruiker.Naam -  @item.vakLector.vak.VakNaam )
+              @Html.DisplayFor(modelItem => item.vakLector.Lector.Gebruiker.VoorNaam )  @item.vakLector.Lector.Gebruiker.Naam -  @item.vakLector.vak.VakNaam 
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.academieJaar.StartDatum)
+                @item.academieJaar.StartDatum.ToString("dd/MM/yyyy")
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.InschrijvingId">Edit</a> |

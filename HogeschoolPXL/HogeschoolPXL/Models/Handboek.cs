@@ -14,6 +14,7 @@ namespace HogeschoolPXL.Models
         [Column(TypeName = "decimal(8,2)")]
         public decimal? KostPrijs { get; set; }
         [UitGifteDate]
+        [DataType(DataType.Date)]
         public DateTime UitgifteDatum { get; set; }
         [Required]
         public string Afbeelding { get; set; }
