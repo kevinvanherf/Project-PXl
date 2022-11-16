@@ -47,8 +47,6 @@ namespace HogeschoolPXL.Controllers
         // GET: Inschrijvings/Create
         public IActionResult Create()
         {
-
-
             var studentSelect = _context.Student.Where(x => x.GebruikerId == x.Gebruiker.GebruikerId)
                 .Select(x => new SelectListItem { Text = $"{x.Gebruiker.VoorNaam} {x.Gebruiker.Naam}", Value= x.StudentId.ToString() }); 
             var VaklectorSelect = _context.VakLector.Where(_x => _x.VakId == _x.vak.VakId)

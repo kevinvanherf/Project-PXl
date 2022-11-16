@@ -45,7 +45,9 @@ namespace HogeschoolPXL.Controllers
 
         // GET: Students/Create
         public IActionResult Create()
-        {
+        {   
+            var student = _context.Gebruiker.Select(w => new SelectListItem { Text = $"{w.VoorNaam} {w.Naam}", Value = w.GebruikerId.ToString() });
+            ViewData["StudentAanmaken"] = student;
             return View();
         }
 
