@@ -22,7 +22,10 @@ namespace HogeschoolPXL.Controllers
         // GET: VakLectors
         public async Task<IActionResult> Index()
         {
-              return View(await _context.VakLector.ToListAsync());
+              return View(await _context.VakLector
+                  .Include(l=> l.Lector).ThenInclude(l=> l.Gebruiker)
+                  .Include(l=>l.vak)
+                  .ToListAsync());
         }
 
         // GET: VakLectors/Details/5
