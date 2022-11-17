@@ -46,6 +46,7 @@ namespace HogeschoolPXL.Controllers
         {
             await _signInManager.SignOutAsync();
             return View("Login");
+
         }
         #endregion
 
