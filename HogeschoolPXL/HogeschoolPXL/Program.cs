@@ -1,5 +1,6 @@
 using HogeschoolPXL.Data;
 using HogeschoolPXL.Data.DefaultData;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<HogeschoolPXLDbContext>(opts =>
 {
     opts.UseSqlServer(builder.Configuration.GetConnectionString("HogeSchoolConnection"));
 });
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<HogeschoolPXLDbContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,12 +27,14 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-SeeData.Populate(app);
+SeeData.PopulateAsync(app);
 
 app.Run();

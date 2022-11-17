@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HogeschoolPXL.Data;
 using HogeschoolPXL.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HogeschoolPXL.Controllers
 {
+    //[Authorize]
     public class GebruikersController : Controller
     {
         private readonly HogeschoolPXLDbContext _context;

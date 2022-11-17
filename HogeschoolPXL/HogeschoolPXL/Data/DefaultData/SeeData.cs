@@ -2,16 +2,25 @@
 using Microsoft.EntityFrameworkCore;
 using static System.Formats.Asn1.AsnWriter;
 using System;
+using Microsoft.AspNetCore.Identity;
+using System.Data;
 
 namespace HogeschoolPXL.Data.DefaultData
 {
     public class SeeData
     {
-        public static void Populate(WebApplication app)
+        static HogeschoolPXLDbContext? _context;
+        static RoleManager<IdentityRole>? _roleManager;
+        static UserManager<IdentityUser>? _userManager;
+        public static async Task PopulateAsync(WebApplication app)
         {
             using (var scope = app.Services.CreateScope())
             {
-               var _context = scope.ServiceProvider.GetRequiredService<HogeschoolPXLDbContext>();
+                
+                _userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+                _roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                 _context = scope.ServiceProvider.GetRequiredService<HogeschoolPXLDbContext>();
                 if (!_context.Gebruiker.Any())
                 {
                     var kevin = new Gebruiker { Naam = "Vanherf", VoorNaam = "Kevin", Email = "Kevin.vanherf@icloud.com" };
@@ -49,6 +58,24 @@ namespace HogeschoolPXL.Data.DefaultData
                     _context.Inschrijving.Add(inschrijving);
                     _context.SaveChanges();  
                 }
+                await VoegRollenToeAsync();
+            }
+        }
+        private static async Task VoegRollenToeAsync()
+        {
+            if (_roleManager != null && !_roleManager.Roles.Any())
+            {
+                await VoegRolToeAsync(Roles.Student);
+                await VoegRolToeAsync(Roles.Lector);
+                await VoegRolToeAsync(Roles.Admin);
+            }
+        }
+        private static async Task VoegRolToeAsync(string roleName)
+        {
+            if (_roleManager != null && !await _roleManager.RoleExistsAsync(roleName))
+            {
+                IdentityRole role = new IdentityRole(roleName);
+                await _roleManager.CreateAsync(role);
             }
         }
     }
