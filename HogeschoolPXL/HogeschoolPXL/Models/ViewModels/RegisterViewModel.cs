@@ -2,6 +2,7 @@
 {
     public class RegisterViewModel : LoginViewModel
     {
+        public string? Username { get; set; }
 
     }
 }

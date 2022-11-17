@@ -59,8 +59,11 @@ namespace HogeschoolPXL.Data.DefaultData
                     _context.SaveChanges();  
                 }
                 await VoegRollenToeAsync();
-            }
-        }
+				await CreateIdentityRecordAsync(Roles.Student, "student@pxl.be", "Student123!", Roles.Student);
+				await CreateIdentityRecordAsync(Roles.Admin, "admin@pxl.be", "Admin456!", Roles.Admin);
+
+			}
+		}
         private static async Task VoegRollenToeAsync()
         {
             if (_roleManager != null && !_roleManager.Roles.Any())
@@ -78,5 +81,19 @@ namespace HogeschoolPXL.Data.DefaultData
                 await _roleManager.CreateAsync(role);
             }
         }
-    }
+		private static async Task CreateIdentityRecordAsync(string userName, string email, string pwd, string role)
+		{
+
+			if (_userManager != null && await _userManager.FindByEmailAsync(email) == null &&
+					await _userManager.FindByNameAsync(userName) == null)
+			{
+				var identityUser = new IdentityUser() { Email = email, UserName = userName };
+				var result = await _userManager.CreateAsync(identityUser, pwd);
+				if (result.Succeeded)
+				{
+					await _userManager.AddToRoleAsync(identityUser, role);
+				}
+			}
+		}
+	}
 }
