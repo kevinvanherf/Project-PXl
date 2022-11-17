@@ -49,7 +49,15 @@ namespace HogeschoolPXL.Controllers
         // GET: VakLectors/Create
         public IActionResult Create()
         {
-            return View();
+            var lector = _context.Lector
+                .Where(x => x.GebruikerId == x.Gebruiker.GebruikerId)
+                .Select(x => new SelectListItem { Text = $"{x.Gebruiker.VoorNaam} {x.Gebruiker.Naam}", Value = x.LectorId.ToString() });
+			var vakken = _context.Vak
+				.Where(x => x.HandboekID == x.Handboek.HandboekID)
+				.Select(x => new SelectListItem { Text = $"{x.Handboek.Titel}", Value = x.HandboekID.ToString() });
+            ViewData["Lector"] = lector;
+            ViewData["vakken"] = vakken;
+			return View();
         }
 
         // POST: VakLectors/Create
