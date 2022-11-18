@@ -52,10 +52,12 @@ namespace HogeschoolPXL.Controllers
             {
                 var identityUser = new IdentityUser();
                 identityUser.Email = user.Email;
-                identityUser.UserName = user.Username;
+                identityUser.UserName = user.Email;
+                
                 var identityResult = await _userManager.CreateAsync(identityUser, user.Password);
                 if (identityResult.Succeeded)
                 {
+                    
                     var roleResult = await _userManager.AddToRoleAsync(identityUser, Roles.Student);
                     if (roleResult.Succeeded)
                         return View("Login");

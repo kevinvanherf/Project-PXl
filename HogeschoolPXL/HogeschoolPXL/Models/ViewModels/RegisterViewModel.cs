@@ -1,11 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace HogeschoolPXL.Models.ViewModels
 {
-    public class RegisterViewModel : LoginViewModel
+    public class RegisterViewModel :LoginViewModel
     {
-        [Display ( Name ="User Name")]
-        public string? Username { get; set; }
+        
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
 
     }
 }
