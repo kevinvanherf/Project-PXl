@@ -36,12 +36,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWVKYWFyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/RoleChange.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSb2xlQ2hhbmdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Create.cshtml]

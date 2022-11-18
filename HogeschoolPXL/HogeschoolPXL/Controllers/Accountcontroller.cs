@@ -1,8 +1,11 @@
 ﻿using HogeschoolPXL.Data;
 using HogeschoolPXL.Data.DefaultData;
+using HogeschoolPXL.Models;
 using HogeschoolPXL.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace HogeschoolPXL.Controllers
@@ -12,6 +15,8 @@ namespace HogeschoolPXL.Controllers
         HogeschoolPXLDbContext _context;
         UserManager<IdentityUser> _userManager;
         SignInManager<IdentityUser> _signInManager;
+        RoleManager<IdentityRole> _roleManager;
+        
         public Accountcontroller(HogeschoolPXLDbContext context, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
             _context= context;
@@ -81,8 +86,73 @@ namespace HogeschoolPXL.Controllers
         public async Task<IActionResult> LogoutAsync()
         {
             await _signInManager.SignOutAsync();
-            return View("Login");
+            //return View("Login");
+            return RedirectToAction("Login");
 
+        }
+        #endregion
+        #region Role Change
+        [Authorize(Roles = Roles.Admin)]
+        public async Task<IActionResult> index()
+        {
+           
+
+            var vakLector = await _userManager.Users.ToListAsync();
+           
+
+
+
+            return View(vakLector);
+        }
+        [Authorize (Roles = Roles.Admin)]
+        [HttpGet]
+        public async Task<IActionResult> RoleChange(string? id)
+        {
+            var userrole = new IdentityViewModel();
+            var user =  _context.Users.Where(x=> x.Id== id).SingleOrDefault();
+            var userInRole =  _context.UserRoles.Where(x=> x.UserId== id).Select(x=> x.RoleId).ToList();
+            userrole.Id = id;
+            userrole.Username = user.UserName;
+            userrole.Email= user.Email;
+            userrole.RoleID = userInRole.ToString();
+            return View(userrole);
+            
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RoleChange(string id, IdentityViewModel user)
+        {
+            if (id != user.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var  _user = new IdentityUser();
+                    _user.Id = user.Id;
+                    _user.UserName = user.Username ; 
+                    _user.Email = user.Email;
+                    var role = _roleManager.FindByIdAsync(user.RoleID);
+                    _userManager.RemoveFromRoleAsync(_user , role.ToString());
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!_userManager.Users.Any(e => e.Id == user.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(RoleChange));
+            }
+            return View(user);
         }
         #endregion
 
