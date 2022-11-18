@@ -59,7 +59,7 @@ namespace HogeschoolPXL.Data.DefaultData
                     _context.SaveChanges();  
                 }
                 await VoegRollenToeAsync();
-				await CreateIdentityRecordAsync("Kevin Vanherf", "student@pxl.be", "Student123!", Roles.Student);
+				await CreateIdentityRecordAsync(Roles.Student, "student@pxl.be", "Student123!", Roles.Student);
 				await CreateIdentityRecordAsync(Roles.Admin, "admin@pxl.be", "Admin456!", Roles.Admin);
 
 			}

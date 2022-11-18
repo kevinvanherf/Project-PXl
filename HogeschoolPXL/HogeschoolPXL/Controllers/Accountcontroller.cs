@@ -1,4 +1,5 @@
 ﻿using HogeschoolPXL.Data;
+using HogeschoolPXL.Data.DefaultData;
 using HogeschoolPXL.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -40,6 +41,39 @@ namespace HogeschoolPXL.Controllers
         }
         #endregion
         #region Register  
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> RegisterAsync(RegisterViewModel user)
+        {
+            if (ModelState.IsValid)
+            {
+                var identityUser = new IdentityUser();
+                identityUser.Email = user.Email;
+                identityUser.UserName = user.Username;
+                var identityResult = await _userManager.CreateAsync(identityUser, user.Password);
+                if (identityResult.Succeeded)
+                {
+                    var roleResult = await _userManager.AddToRoleAsync(identityUser, Roles.Student);
+                    if (roleResult.Succeeded)
+                        return View("Login");
+                    else
+                    {
+                        ModelState.AddModelError("", "Problemen met toekennen van rol!");
+                        return View();
+                    }
+                }
+                    
+
+                foreach (var errors in identityResult.Errors)
+                {
+                    ModelState.AddModelError("", errors.Description);
+                }
+            }
+            return View();
+        }
         #endregion
         #region Logout 
         public async Task<IActionResult> LogoutAsync()
