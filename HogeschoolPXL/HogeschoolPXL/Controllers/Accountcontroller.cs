@@ -96,9 +96,12 @@ namespace HogeschoolPXL.Controllers
         public async Task<IActionResult> index()
         {
            
-
+            var users = new IdentityViewModel();
             var vakLector = await _userManager.Users.ToListAsync();
-           
+            foreach (var role in vakLector)
+            {
+
+            }
 
 
 
