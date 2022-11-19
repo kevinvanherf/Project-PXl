@@ -1,6 +1,9 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿@using HogeschoolPXL.Data;
+@using HogeschoolPXL.Data.DefaultData;
+@using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
+
 
 	<ul class="navbar-nav">
 	@if (SignInManager.IsSignedIn(User))
@@ -18,10 +21,15 @@
 			<a class="nav-link text-dark" asp-controller="Account"
 			asp-action="Logout">Loguot</a>
 		</li>
+		@if (User.IsInRole(Roles.Admin))
+		{
+			
+		
 			<li class="nav-item">
 				<a class="nav-link text-dark" asp-controller="Account"
 			asp-action="Index">Acounts</a>
 			</li>
+		}
 	}
 	else
 	{

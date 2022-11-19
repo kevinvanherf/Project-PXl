@@ -5,8 +5,10 @@ using HogeschoolPXL.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Data;
 
 namespace HogeschoolPXL.Controllers
 {
@@ -95,17 +97,24 @@ namespace HogeschoolPXL.Controllers
         [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> index()
         {
-           
-            var users = new IdentityViewModel();
-            var vakLector = await _userManager.Users.ToListAsync();
+           var userss = new List<IdentityViewModel>();
+            
+                var vakLector = await _context.Users
+                .ToListAsync();
             foreach (var role in vakLector)
             {
-
+                var users = new IdentityViewModel();
+                users.Id = role.Id;
+                users.Username = role.UserName;
+                users.Email = role.Email;
+                users.RoleID = _context.UserRoles.Where(x=> x.UserId == role.Id).Select(x=> x.RoleId).FirstOrDefault();
+                users.Roles = await _context.Roles.FirstOrDefaultAsync(x=> x.Id==users.RoleID);
+                userss.Add(users);
             }
 
 
 
-            return View(vakLector);
+            return View(userss);
         }
         [Authorize (Roles = Roles.Admin)]
         [HttpGet]
@@ -113,11 +122,12 @@ namespace HogeschoolPXL.Controllers
         {
             var userrole = new IdentityViewModel();
             var user =  _context.Users.Where(x=> x.Id== id).SingleOrDefault();
-            var userInRole =  _context.UserRoles.Where(x=> x.UserId== id).Select(x=> x.RoleId).ToList();
+            ViewData["IdentityUserId"] = _context.Roles.Select(x=> new SelectListItem {Text = x.Name , Value = x.Id  });
             userrole.Id = id;
             userrole.Username = user.UserName;
             userrole.Email= user.Email;
-            userrole.RoleID = userInRole.ToString();
+            userrole.RoleID = _context.UserRoles.Where(x => x.UserId == userrole.Id).Select(x => x.RoleId).FirstOrDefault();
+            userrole.Roles = await _context.Roles.FirstOrDefaultAsync(x => x.Id == userrole.RoleID);
             return View(userrole);
             
         }
@@ -141,6 +151,7 @@ namespace HogeschoolPXL.Controllers
                     var role = _roleManager.FindByIdAsync(user.RoleID);
                     _userManager.RemoveFromRoleAsync(_user , role.ToString());
                     await _context.SaveChangesAsync();
+                    
                 }
                 catch (DbUpdateConcurrencyException)
                 {
