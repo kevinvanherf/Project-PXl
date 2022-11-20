@@ -144,14 +144,36 @@ namespace HogeschoolPXL.Controllers
             {
                 try
                 {
-                    var  _user = new IdentityUser();
-                    _user.Id = user.Id;
-                    _user.UserName = user.Username ; 
-                    _user.Email = user.Email;
-                    var role = _roleManager.FindByIdAsync(user.RoleID);
-                    _userManager.RemoveFromRoleAsync(_user , role.ToString());
-                    await _context.SaveChangesAsync();
+                    var role = await _context.UserRoles.Where(x => x.UserId == user.Id).Select(x => x.RoleId).FirstOrDefaultAsync();
+                    var _user = new IdentityUser();
+                    _user =  _userManager.Users.Where(x => x.Id == user.Id).FirstOrDefault();
                     
+                    _user.UserName = user.Username ;
+                    _user.NormalizedUserName = user.Username;
+                    _user.Email = user.Email;
+                    _user.NormalizedEmail= user.Email;
+                    
+                    //var role = _roleManager.FindByIdAsync(user.RoleID);
+                    //_userManager.RemoveFromRoleAsync(_user , role);
+                    
+                    //await _context.SaveChangesAsync();
+
+                    _context.UserRoles.Remove(new IdentityUserRole<string>
+                    {
+                        RoleId = role,
+                        UserId = user.Id
+
+                    });
+                    _context.UserRoles.Add(new IdentityUserRole<string>
+                    {
+                        RoleId = user.RoleID,
+                        UserId = user.Id
+
+                    });
+                    _context.SaveChanges();
+                    _context.Update(_user);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
