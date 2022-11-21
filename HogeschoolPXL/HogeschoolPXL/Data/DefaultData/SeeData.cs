@@ -68,6 +68,7 @@ namespace HogeschoolPXL.Data.DefaultData
         {
             if (_roleManager != null && !_roleManager.Roles.Any())
             {
+                await VoegRolToeAsync(Roles.NwGebruiker);
                 await VoegRolToeAsync(Roles.Student);
                 await VoegRolToeAsync(Roles.Lector);
                 await VoegRolToeAsync(Roles.Admin);
