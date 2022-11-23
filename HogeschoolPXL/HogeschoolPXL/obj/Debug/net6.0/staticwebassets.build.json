@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "o/4WjycEvXKsy4grwNfZoJHZDn4ArtlCUBANtxAwM0o=",
+  "Hash": "KIGK9Tou753Rlh1/wpnLzyl0jzuYvu1WjZKfjCdXhXs=",
   "Source": "HogeschoolPXL",
   "BasePath": "_content/HogeschoolPXL",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\wwwroot\\images\\001-log-out.png",
+      "SourceId": "HogeschoolPXL",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\wwwroot\\",
+      "BasePath": "_content/HogeschoolPXL",
+      "RelativePath": "images/001-log-out.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\001-log-out.png"
     },
     {
       "Identity": "C:\\projecten c#\\web\\project\\Project-PXl\\HogeschoolPXL\\HogeschoolPXL\\wwwroot\\images\\cWeb.jpg",
