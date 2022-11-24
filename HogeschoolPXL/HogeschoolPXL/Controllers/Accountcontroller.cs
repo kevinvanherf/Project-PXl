@@ -108,6 +108,8 @@ namespace HogeschoolPXL.Controllers
             {
                 var users = new IdentityViewModel();
                 users.Id = role.Id;
+                users.FirstName= role.FirstName;
+                users.LastName= role.LastName;
                 users.Username = role.UserName;
                 users.Email = role.Email;
                 users.RoleID = _context.UserRoles.Where(x=> x.UserId == role.Id).Select(x=> x.RoleId).FirstOrDefault();
@@ -127,6 +129,8 @@ namespace HogeschoolPXL.Controllers
             var user =  _context.Users.Where(x=> x.Id== id).SingleOrDefault();
             ViewData["IdentityUserId"] = _context.Roles.Select(x=> new SelectListItem {Text = x.Name , Value = x.Id  });
             userrole.Id = id;
+            userrole.FirstName = user.FirstName;
+            userrole.LastName = user.LastName;
             userrole.Username = user.UserName;
             userrole.Email= user.Email;
             userrole.RoleID = _context.UserRoles.Where(x => x.UserId == userrole.Id).Select(x => x.RoleId).FirstOrDefault();
@@ -148,9 +152,11 @@ namespace HogeschoolPXL.Controllers
                 try
                 {
                     var role = await _context.UserRoles.Where(x => x.UserId == user.Id).Select(x => x.RoleId).FirstOrDefaultAsync();
-                    var _user = new IdentityUser();
+                    var _user = new User();
                     _user =  _userManager.Users.Where(x => x.Id == user.Id).FirstOrDefault();
                     
+                    _user.FirstName = user.FirstName;
+                    _user.LastName = user.LastName;
                     _user.UserName = user.Username ;
                     _user.NormalizedUserName = user.Username;
                     _user.Email = user.Email;
