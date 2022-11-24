@@ -13,8 +13,8 @@ namespace HogeschoolPXL.Models
 		[EmailAddress]
 		public string? Email { get; set; }
 
-        //public string? UserIs { get; set; }
+        public string? UserIs { get; set; }
 
-        //public User? User { get; set; }
+        public User? User { get; set; }
     }
 }
