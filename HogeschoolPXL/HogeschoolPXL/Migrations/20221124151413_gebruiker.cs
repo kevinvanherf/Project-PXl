@@ -14,12 +14,6 @@ namespace HogeschoolPXL.Migrations
                 type: "nvarchar(450)",
                 nullable: true);
 
-            migrationBuilder.AddColumn<string>(
-                name: "UserIs",
-                table: "Gebruiker",
-                type: "nvarchar(max)",
-                nullable: true);
-
             migrationBuilder.CreateIndex(
                 name: "IX_Gebruiker_UserId",
                 table: "Gebruiker",
@@ -47,9 +41,7 @@ namespace HogeschoolPXL.Migrations
                 name: "UserId",
                 table: "Gebruiker");
 
-            migrationBuilder.DropColumn(
-                name: "UserIs",
-                table: "Gebruiker");
+           
         }
     }
 }
