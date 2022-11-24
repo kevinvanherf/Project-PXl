@@ -24,7 +24,9 @@ namespace HogeschoolPXL.Controllers
         // GET: Gebruikers
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Gebruiker.ToListAsync());
+              return View(await _context.Gebruiker
+                  .Include(x=> x.User)
+                  .ToListAsync());
         }
 
         // GET: Gebruikers/Details/5
@@ -36,6 +38,7 @@ namespace HogeschoolPXL.Controllers
             }
 
             var gebruiker = await _context.Gebruiker
+                .Include(x=> x.User)
                 .FirstOrDefaultAsync(m => m.GebruikerId == id);
             if (gebruiker == null)
             {
@@ -48,6 +51,7 @@ namespace HogeschoolPXL.Controllers
         // GET: Gebruikers/Create
         public IActionResult Create()
         {
+            ViewData["Users"] = _context.Users.Select(x => new SelectListItem {Text = $"{x.FirstName} {x.LastName}" , Value= x.Id });
             return View();
         }
 
@@ -74,6 +78,7 @@ namespace HogeschoolPXL.Controllers
             {
                 return NotFound();
             }
+            ViewData["Users"] = _context.Users.Select(x => new SelectListItem { Text = $"{x.FirstName} {x.LastName}", Value = x.Id });
 
             var gebruiker = await _context.Gebruiker.FindAsync(id);
             if (gebruiker == null)
