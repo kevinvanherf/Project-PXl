@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HogeschoolPXL.Migrations
 {
     [DbContext(typeof(HogeschoolPXLDbContext))]
-    [Migration("20221124145845_inschrijving")]
-    partial class inschrijving
+    [Migration("20221124154554_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -54,10 +54,15 @@ namespace HogeschoolPXL.Migrations
                     b.Property<string>("Naam")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("VoorNaam")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("GebruikerId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Gebruiker");
                 });
@@ -405,6 +410,15 @@ namespace HogeschoolPXL.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("HogeschoolPXL.Models.Gebruiker", b =>
+                {
+                    b.HasOne("HogeschoolPXL.Models.ViewModels.Identity.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("HogeschoolPXL.Models.Inschrijving", b =>

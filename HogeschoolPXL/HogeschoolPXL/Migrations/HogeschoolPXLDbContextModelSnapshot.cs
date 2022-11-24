@@ -35,7 +35,7 @@ namespace HogeschoolPXL.Migrations
 
                     b.HasKey("AcademieJaarId");
 
-                    b.ToTable("AcademieJaar", (string)null);
+                    b.ToTable("AcademieJaar");
                 });
 
             modelBuilder.Entity("HogeschoolPXL.Models.Gebruiker", b =>
@@ -55,9 +55,6 @@ namespace HogeschoolPXL.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("UserIs")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("VoorNaam")
                         .HasColumnType("nvarchar(max)");
 
@@ -65,7 +62,7 @@ namespace HogeschoolPXL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Gebruiker", (string)null);
+                    b.ToTable("Gebruiker");
                 });
 
             modelBuilder.Entity("HogeschoolPXL.Models.Handboek", b =>
@@ -92,7 +89,7 @@ namespace HogeschoolPXL.Migrations
 
                     b.HasKey("HandboekID");
 
-                    b.ToTable("Handboek", (string)null);
+                    b.ToTable("Handboek");
                 });
 
             modelBuilder.Entity("HogeschoolPXL.Models.Inschrijving", b =>
@@ -120,7 +117,7 @@ namespace HogeschoolPXL.Migrations
 
                     b.HasIndex("VakLectorId");
 
-                    b.ToTable("Inschrijving", (string)null);
+                    b.ToTable("Inschrijving");
                 });
 
             modelBuilder.Entity("HogeschoolPXL.Models.Lector", b =>
@@ -138,7 +135,7 @@ namespace HogeschoolPXL.Migrations
 
                     b.HasIndex("GebruikerId");
 
-                    b.ToTable("Lector", (string)null);
+                    b.ToTable("Lector");
                 });
 
             modelBuilder.Entity("HogeschoolPXL.Models.Student", b =>
@@ -156,7 +153,7 @@ namespace HogeschoolPXL.Migrations
 
                     b.HasIndex("GebruikerId");
 
-                    b.ToTable("Student", (string)null);
+                    b.ToTable("Student");
                 });
 
             modelBuilder.Entity("HogeschoolPXL.Models.Vak", b =>
@@ -181,7 +178,7 @@ namespace HogeschoolPXL.Migrations
 
                     b.HasIndex("HandboekID");
 
-                    b.ToTable("Vak", (string)null);
+                    b.ToTable("Vak");
                 });
 
             modelBuilder.Entity("HogeschoolPXL.Models.VakLector", b =>
@@ -204,7 +201,7 @@ namespace HogeschoolPXL.Migrations
 
                     b.HasIndex("VakId");
 
-                    b.ToTable("VakLector", (string)null);
+                    b.ToTable("VakLector");
                 });
 
             modelBuilder.Entity("HogeschoolPXL.Models.ViewModels.Identity.User", b =>

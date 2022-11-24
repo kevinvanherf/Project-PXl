@@ -59,6 +59,8 @@ namespace HogeschoolPXL.Controllers
             if (ModelState.IsValid)
             {
                 var identityUser = new User();
+                identityUser.FirstName = user.FirstName;
+                identityUser.LastName = user.LastName;
                 identityUser.Email = user.Email;
                 identityUser.UserName = user.Username;
                 
