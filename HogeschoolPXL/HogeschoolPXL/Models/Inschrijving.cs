@@ -16,5 +16,6 @@ namespace HogeschoolPXL.Models
         public VakLector? vakLector { get; set; }
         public Student? Student { get; set; }
         public AcademieJaar? academieJaar { get;set; }
+
     }
 }

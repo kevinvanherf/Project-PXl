@@ -1,8 +1,12 @@
-﻿namespace HogeschoolPXL.Models.ViewModels
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace HogeschoolPXL.Models.ViewModels
 {
     public class LoginViewModel
     {
-        public string? Email { get; set; }
-        public string? Password { get; set; }
+		[EmailAddress]
+		public string? Email { get; set; }
+		[DataType(DataType.Password)]
+		public string? Password { get; set; }
     }
 }

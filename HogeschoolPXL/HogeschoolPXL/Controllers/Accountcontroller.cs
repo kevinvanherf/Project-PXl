@@ -2,6 +2,7 @@
 using HogeschoolPXL.Data.DefaultData;
 using HogeschoolPXL.Models;
 using HogeschoolPXL.Models.ViewModels;
+using HogeschoolPXL.Models.ViewModels.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -15,11 +16,11 @@ namespace HogeschoolPXL.Controllers
     public class Accountcontroller : Controller
     {
         HogeschoolPXLDbContext _context;
-        UserManager<IdentityUser> _userManager;
-        SignInManager<IdentityUser> _signInManager;
+        UserManager<User> _userManager;
+        SignInManager<User> _signInManager;
         RoleManager<IdentityRole> _roleManager;
         
-        public Accountcontroller(HogeschoolPXLDbContext context, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public Accountcontroller(HogeschoolPXLDbContext context, UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _context= context;
             _userManager= userManager;
@@ -57,7 +58,7 @@ namespace HogeschoolPXL.Controllers
         {
             if (ModelState.IsValid)
             {
-                var identityUser = new IdentityUser();
+                var identityUser = new User();
                 identityUser.Email = user.Email;
                 identityUser.UserName = user.Username;
                 

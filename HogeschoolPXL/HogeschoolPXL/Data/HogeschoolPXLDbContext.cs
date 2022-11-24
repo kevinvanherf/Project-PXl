@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using HogeschoolPXL.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using HogeschoolPXL.Models.ViewModels.Identity;
 
 namespace HogeschoolPXL.Data
 {
-    public class HogeschoolPXLDbContext : IdentityDbContext
+    public class HogeschoolPXLDbContext : IdentityDbContext<User>
     {
         public HogeschoolPXLDbContext(DbContextOptions<HogeschoolPXLDbContext> options)
             : base(options)

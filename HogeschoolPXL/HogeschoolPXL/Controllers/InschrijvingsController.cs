@@ -25,8 +25,8 @@ namespace HogeschoolPXL.Controllers
         {
               return View(await _context.Inschrijving
                   .Include(x=> x.academieJaar)
-                  .Include(x=> x.vakLector).ThenInclude(v=> v.vak)
-                  .Include(x=> x.vakLector).ThenInclude(v=> v.Lector).ThenInclude(l=> l.Gebruiker)
+                  .Include(x => x.vakLector).ThenInclude(v => v.vak)
+                  .Include(x => x.vakLector).ThenInclude(v => v.Lector).ThenInclude(l => l.Gebruiker)
                   .Include(x=> x.Student).ThenInclude(s => s.Gebruiker)
                   .ToListAsync());
         }

@@ -4,6 +4,7 @@ using static System.Formats.Asn1.AsnWriter;
 using System;
 using Microsoft.AspNetCore.Identity;
 using System.Data;
+using HogeschoolPXL.Models.ViewModels.Identity;
 
 namespace HogeschoolPXL.Data.DefaultData
 {
@@ -11,13 +12,13 @@ namespace HogeschoolPXL.Data.DefaultData
     {
         static HogeschoolPXLDbContext? _context;
         static RoleManager<IdentityRole>? _roleManager;
-        static UserManager<IdentityUser>? _userManager;
+        static UserManager<User>? _userManager;
         public static async Task PopulateAsync(WebApplication app)
         {
             using (var scope = app.Services.CreateScope())
             {
                 
-                _userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+                _userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
                 _roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
                  _context = scope.ServiceProvider.GetRequiredService<HogeschoolPXLDbContext>();
@@ -54,13 +55,13 @@ namespace HogeschoolPXL.Data.DefaultData
                     var academijar = new AcademieJaar { StartDatum = new DateTime(2021, 09, 20) };
                     _context.AcademieJaar.Add(academijar);
                     _context.SaveChanges();
-                    var inschrijving = new Inschrijving { AcademieJaarId = 1,  StudentId= 1, VakLectorId= 1 };
+                    var inschrijving = new Inschrijving { AcademieJaarId = 1,  StudentId= 1, VakLectorId = 1 };
                     _context.Inschrijving.Add(inschrijving);
                     _context.SaveChanges();  
                 }
                 await VoegRollenToeAsync();
-				await CreateIdentityRecordAsync(Roles.Student, "student@pxl.be", "Student123!", Roles.Student);
-				await CreateIdentityRecordAsync(Roles.Admin, "admin@pxl.be", "Admin456!", Roles.Admin);
+				await CreateIdentityRecordAsync("kevin","Vanherf",Roles.Student, "student@pxl.be", "Student123!", Roles.Student);
+				await CreateIdentityRecordAsync("Admin", "",Roles.Admin, "admin@pxl.be", "Admin456!", Roles.Admin);
 
 			}
 		}
@@ -82,13 +83,13 @@ namespace HogeschoolPXL.Data.DefaultData
                 await _roleManager.CreateAsync(role);
             }
         }
-		private static async Task CreateIdentityRecordAsync(string userName, string email, string pwd, string role)
+		private static async Task CreateIdentityRecordAsync(string firstName, string lastName, string userName, string email, string pwd, string role)
 		{
 
 			if (_userManager != null && await _userManager.FindByEmailAsync(email) == null &&
 					await _userManager.FindByNameAsync(userName) == null)
 			{
-				var identityUser = new IdentityUser() { Email = email, UserName = userName };
+				var identityUser = new User() {FirstName= firstName, LastName= lastName, Email = email, UserName = userName };
 				var result = await _userManager.CreateAsync(identityUser, pwd);
 				if (result.Succeeded)
 				{

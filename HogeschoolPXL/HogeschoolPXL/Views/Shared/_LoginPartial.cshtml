@@ -1,9 +1,10 @@
 ﻿@using HogeschoolPXL.Data;
 @using HogeschoolPXL.Data.DefaultData;
+@using HogeschoolPXL.Models.ViewModels.Identity;
 @using Microsoft.AspNetCore.Identity
 @inject HogeschoolPXLDbContext context
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
 @{
 	var VollName ="";
 	var user = context.Users.Where(x => x.UserName == User.Identity.Name).Select(x=> x.Email).FirstOrDefault();

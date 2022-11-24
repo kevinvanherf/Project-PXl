@@ -1,5 +1,6 @@
 using HogeschoolPXL.Data;
 using HogeschoolPXL.Data.DefaultData;
+using HogeschoolPXL.Models.ViewModels.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +12,7 @@ builder.Services.AddDbContext<HogeschoolPXLDbContext>(opts =>
 {
     opts.UseSqlServer(builder.Configuration.GetConnectionString("HogeSchoolConnection"));
 });
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<HogeschoolPXLDbContext>();
+builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<HogeschoolPXLDbContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
