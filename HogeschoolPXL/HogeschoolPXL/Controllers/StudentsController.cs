@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HogeschoolPXL.Data;
 using HogeschoolPXL.Models;
+using Microsoft.AspNetCore.Authorization;
+using HogeschoolPXL.Data.DefaultData;
 
 namespace HogeschoolPXL.Controllers
 {
+    [Authorize]
     public class StudentsController : Controller
     {
         private readonly HogeschoolPXLDbContext _context;
@@ -18,7 +21,7 @@ namespace HogeschoolPXL.Controllers
         {
             _context = context;
         }
-
+        [Authorize (Roles =  Roles.Admin)]
         // GET: Students
         public async Task<IActionResult> Index()
         {
@@ -46,6 +49,7 @@ namespace HogeschoolPXL.Controllers
         }
 
         // GET: Students/Create
+        [Authorize(Roles = Roles.Admin)]
         public IActionResult Create()
         {   
             var student = _context.Gebruiker
@@ -71,6 +75,7 @@ namespace HogeschoolPXL.Controllers
         }
 
         // GET: Students/Edit/5
+        [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Student == null)
@@ -122,6 +127,7 @@ namespace HogeschoolPXL.Controllers
         }
 
         // GET: Students/Delete/5
+        [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Student == null)

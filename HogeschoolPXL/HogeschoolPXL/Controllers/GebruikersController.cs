@@ -8,10 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using HogeschoolPXL.Data;
 using HogeschoolPXL.Models;
 using Microsoft.AspNetCore.Authorization;
+using HogeschoolPXL.Data.DefaultData;
 
 namespace HogeschoolPXL.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class GebruikersController : Controller
     {
         private readonly HogeschoolPXLDbContext _context;
@@ -20,7 +21,7 @@ namespace HogeschoolPXL.Controllers
         {
             _context = context;
         }
-
+        [Authorize(Roles =Roles.Admin)]
         // GET: Gebruikers
         public async Task<IActionResult> Index()
         {
@@ -28,7 +29,7 @@ namespace HogeschoolPXL.Controllers
                   .Include(x=> x.User)
                   .ToListAsync());
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Gebruikers/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -47,7 +48,7 @@ namespace HogeschoolPXL.Controllers
 
             return View(gebruiker);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Gebruikers/Create
         public IActionResult Create()
         {
@@ -58,6 +59,7 @@ namespace HogeschoolPXL.Controllers
         // POST: Gebruikers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("GebruikerId,Naam,VoorNaam,Email ,UserId ")] Gebruiker gebruiker)
@@ -70,7 +72,7 @@ namespace HogeschoolPXL.Controllers
             }
             return View(gebruiker);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Gebruikers/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -122,7 +124,7 @@ namespace HogeschoolPXL.Controllers
             }
             return View(gebruiker);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Gebruikers/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

@@ -8,9 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using HogeschoolPXL.Data;
 using HogeschoolPXL.Models;
 using System.Collections.Immutable;
+using HogeschoolPXL.Data.DefaultData;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HogeschoolPXL.Controllers
 {
+    [Authorize]
     public class InschrijvingsController : Controller
     {
         private readonly HogeschoolPXLDbContext _context;
@@ -19,7 +22,7 @@ namespace HogeschoolPXL.Controllers
         {
             _context = context;
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Inschrijvings
         public async Task<IActionResult> Index()
         {
@@ -30,7 +33,7 @@ namespace HogeschoolPXL.Controllers
                   .Include(x=> x.Student).ThenInclude(s => s.Gebruiker)
                   .ToListAsync());
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Inschrijvings/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -48,7 +51,7 @@ namespace HogeschoolPXL.Controllers
 
             return View(inschrijving);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Inschrijvings/Create
         public IActionResult Create()
         {
@@ -78,7 +81,7 @@ namespace HogeschoolPXL.Controllers
             }
             return View(inschrijving);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Inschrijvings/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -129,7 +132,7 @@ namespace HogeschoolPXL.Controllers
             }
             return View(inschrijving);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Inschrijvings/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
