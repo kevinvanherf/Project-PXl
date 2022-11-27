@@ -1,4 +1,5 @@
-﻿using HogeschoolPXL.Models;
+﻿using HogeschoolPXL.Data;
+using HogeschoolPXL.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -9,15 +10,17 @@ namespace HogeschoolPXL.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public HogeschoolPXLDbContext _context { get; set; }
+        public HomeController(ILogger<HomeController> logger , HogeschoolPXLDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+
+            return View(_context.Inschrijving.ToList());
         }
 
         public IActionResult Privacy()

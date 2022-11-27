@@ -16,3 +16,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.course-org-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    grid-column-gap: 1.875rem;
+}
