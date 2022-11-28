@@ -17,9 +17,9 @@ namespace HogeschoolPXL.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string search)
         {
-
+            ViewData["search"]= search;
             return View(_context.Inschrijving.ToList());
         }
 

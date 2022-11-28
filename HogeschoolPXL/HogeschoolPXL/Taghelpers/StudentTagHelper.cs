@@ -12,11 +12,12 @@ using System.Numerics;
 namespace HogeschoolPXL.Taghelpers
 {
 	// You may need to install the Microsoft.AspNetCore.Razor.Runtime package into your project
-	[HtmlTargetElement("Student")]
+	[HtmlTargetElement("Student" )]
 	public class StudentTagHelper : TagHelper
 	{
-
-		public UserManager<User> _userManger { get; set; }
+        [HtmlAttributeName("search")]
+        public string? search { get; set; }
+        public UserManager<User> _userManger { get; set; }
 		public HogeschoolPXLDbContext _context { get; set; }
 		private IWebHostEnvironment _environment;
 

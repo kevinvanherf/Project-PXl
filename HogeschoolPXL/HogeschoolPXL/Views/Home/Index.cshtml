@@ -1,16 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    
+    string search = ViewBag.search;
 }
-@model IEnumerable<HogeschoolPXL.Models.Inschrijving>
 
+<p style="display:flex" >
+    @using (@Html.BeginForm())
+    {
+        
+        @Html.TextBox("search") <input class="form-control mr-sm-2" type="submit" value="search" type="search" style="width: auto;"/>
+    }
 
- <form>
-     <p> zoeken :  <input type="text" class="" placeholder="vak" aria-label="Vak" aria-describedby="basic-addon1">
-      </p>
-    </form>
+ <p/>
     
     
-<Student></Student>
+<Student search="@search" ></Student>
 
 
