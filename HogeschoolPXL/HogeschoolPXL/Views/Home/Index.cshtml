@@ -1,18 +1,17 @@
-﻿@{
+﻿@*moeten nog gefiltert worden voor lectoren en studetent apparte dingen zien zeflde voor admin 
+*@
+@{
     ViewData["Title"] = "Home Page";
     string search = ViewBag.search;
 }
 
-<p style="display:flex" >
-    @using (@Html.BeginForm())
-    {
-        
-        @Html.TextBox("search") <input class="form-control mr-sm-2" type="submit" value="search" type="search" style="width: auto;"/>
-    }
 
- <p/>
-    
-    
+    <form action="/" method="post" class="search" >
+        @Html.TextBox("search") <input class="form-control mr-sm-2" type="submit" value="search" type="search" style="width: auto;"/>
+        </form>
+        <br />
+        <h2>Cursussen : </h2>
+        <br />
 <Student search="@search" ></Student>
 
 
