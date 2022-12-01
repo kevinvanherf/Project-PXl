@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HogeschoolPXL.Data;
 using HogeschoolPXL.Models;
+using HogeschoolPXL.Data.DefaultData;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HogeschoolPXL.Controllers
 {
+    [Authorize]
     public class HandboeksController : Controller
     {
         private readonly HogeschoolPXLDbContext _context;
@@ -18,13 +21,13 @@ namespace HogeschoolPXL.Controllers
         {
             _context = context;
         }
-
+        [Authorize(Roles  = $"{Roles.Admin} , {Roles.Lector}")]
         // GET: Handboeks
         public async Task<IActionResult> Index()
         {
               return View(await _context.Handboek.ToListAsync());
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Handboeks/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -42,7 +45,7 @@ namespace HogeschoolPXL.Controllers
 
             return View(handboek);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Handboeks/Create
         [HttpGet]
         public IActionResult Create()
@@ -50,7 +53,7 @@ namespace HogeschoolPXL.Controllers
             var handboek = new NewHandboek();
             return View(handboek);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // POST: Handboeks/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -67,7 +70,7 @@ namespace HogeschoolPXL.Controllers
             }
             return View(handboek);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Handboeks/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -89,7 +92,7 @@ namespace HogeschoolPXL.Controllers
             newHandboek.Price_string = handboek.KostPrijs.ToString();
             return View(newHandboek);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // POST: Handboeks/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -125,7 +128,7 @@ namespace HogeschoolPXL.Controllers
             }
             return View(handboek);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Handboeks/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -143,7 +146,7 @@ namespace HogeschoolPXL.Controllers
 
             return View(handboek);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // POST: Handboeks/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

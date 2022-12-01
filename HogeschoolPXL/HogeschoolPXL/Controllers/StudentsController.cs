@@ -21,7 +21,7 @@ namespace HogeschoolPXL.Controllers
         {
             _context = context;
         }
-        [Authorize (Roles =  Roles.Admin)]
+        [Authorize (Roles = $"{ Roles.Admin}, {Roles.Lector}")]
         // GET: Students
         public async Task<IActionResult> Index()
         {
@@ -29,7 +29,7 @@ namespace HogeschoolPXL.Controllers
                   .Include(x=> x.Gebruiker)
                   .ToListAsync());
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // GET: Students/Details/5
         public async Task<IActionResult> Details(int? id)
         {
