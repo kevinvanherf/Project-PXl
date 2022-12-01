@@ -57,7 +57,7 @@ namespace HogeschoolPXL.Controllers
             ViewData["Student"] = student;
             return View();
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // POST: Students/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -90,7 +90,7 @@ namespace HogeschoolPXL.Controllers
             }
             return View(student);
         }
-
+        [Authorize(Roles = Roles.Admin)]
         // POST: Students/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
