@@ -42,6 +42,7 @@ namespace HogeschoolPXL.Taghelpers
 				.Where(x => x.Student.Gebruiker.UserId == identityUser.Id)
 				.Include(x=> x.vakLector).ThenInclude(x=> x.Lector).ThenInclude(x => x.Gebruiker)
                 .Include(x => x.vakLector).ThenInclude(x => x.vak).ThenInclude(x => x.Handboek)
+                .Where(x=> x.vakLector.vak.VakNaam.Contains(search))
                 .ToListAsync();
             TagBuilder divCard = new TagBuilder("div");
             divCard.Attributes["class"] = "course-org-list";
