@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38b52665-a173-4eea-8093-aa6bc90a9559" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HogeschoolPXL/.vs/HogeschoolPXL/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/.vs/HogeschoolPXL/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/.vs/HogeschoolPXL/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/.vs/HogeschoolPXL/v17/.futdcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HogeschoolPXL/.vs/HogeschoolPXL/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/.vs/HogeschoolPXL/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/.vs/ProjectEvaluation/hogeschoolpxl.metadata.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/.vs/ProjectEvaluation/hogeschoolpxl.metadata.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/.vs/ProjectEvaluation/hogeschoolpxl.projects.v5.2" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/.vs/ProjectEvaluation/hogeschoolpxl.projects.v5.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/Taghelpers/StudentTagHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/Taghelpers/StudentTagHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/bin/Debug/net6.0/HogeschoolPXL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/bin/Debug/net6.0/HogeschoolPXL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/bin/Debug/net6.0/HogeschoolPXL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/bin/Debug/net6.0/HogeschoolPXL.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/Debug/net6.0/HogeschoolPXL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/Debug/net6.0/HogeschoolPXL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/Debug/net6.0/HogeschoolPXL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/Debug/net6.0/HogeschoolPXL.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/Debug/net6.0/project.razor.vs.json" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/Debug/net6.0/project.razor.vs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/Debug/net6.0/ref/HogeschoolPXL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/Debug/net6.0/ref/HogeschoolPXL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/Debug/net6.0/refint/HogeschoolPXL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/Debug/net6.0/refint/HogeschoolPXL.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/HogeschoolPXL.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/HogeschoolPXL.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/HogeschoolPXL/HogeschoolPXL/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,14 +23,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c# web projecten/Project-PXl",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,6 +47,7 @@
       <workItem from="1666693863070" duration="38000" />
       <workItem from="1667076943912" duration="16000" />
       <workItem from="1669809080560" duration="500000" />
+      <workItem from="1669977132844" duration="370000" />
     </task>
     <servers />
   </component>
