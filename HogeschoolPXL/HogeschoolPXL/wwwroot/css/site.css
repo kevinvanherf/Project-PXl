@@ -41,8 +41,47 @@ body {
     border-radius: 5%;
 
 }
-.login-container{
-color: white;
+.login-container {
+    color: white;
     padding: 10px;
+    width: 350px;
+}
+.input-login{
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    background: GRAY;
+    outline: none;
+    height: 40px;
+    color: #000000;
+    font-size: 16px;
+    border-radius: 0.7rem;
+}
+.h1-center{
+    text-align: center;
+}
+.login-button {
+    border-radius: 100px;
+    width: 100%;
+    margin-top: 19px;
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+    box-shadow: 0 9px #999;
 
+}
+.login-button:hover {background-color: rgba(0, 0, 0, 0.36);
+    color: white;
+
+}
+
+.login-button:active {
+    background-color: #ffffff;
+    color: black;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.control-label{
+    font-size: 20px;
 }
