@@ -116,7 +116,7 @@ namespace HogeschoolPXL.Taghelpers
         {
             TagBuilder cardButton = new TagBuilder("a");
             cardButton.Attributes["class"] = "btn btn-primary ";
-            cardButton.Attributes["href"] = "# ";
+            cardButton.Attributes["asp-action"] = "CursusPgInfo";
             cardButton.InnerHtml.AppendHtml("Go somewhere");
 
             return cardButton;

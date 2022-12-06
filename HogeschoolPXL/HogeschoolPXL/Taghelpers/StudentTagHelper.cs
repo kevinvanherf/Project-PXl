@@ -68,7 +68,7 @@ namespace HogeschoolPXL.Taghelpers
                 //Lector
                 divCard.InnerHtml.AppendHtml(UserCardItem( user));
             //button
-            divCard.InnerHtml.AppendHtml(UserCardButton());
+            divCard.InnerHtml.AppendHtml(UserCardButton(user));
 
             return divCard;
         }
@@ -112,11 +112,11 @@ namespace HogeschoolPXL.Taghelpers
           
             return cardtext;
         }
-        private TagBuilder UserCardButton()
+        private TagBuilder UserCardButton(Inschrijving inschrijving)
         {
             TagBuilder cardButton = new TagBuilder("a");
-            cardButton.Attributes["class"] = "btn btn-primary ";
-            cardButton.Attributes["href"] = "# ";
+            cardButton.Attributes["class"] = "btn btn-primary "; 
+            cardButton.Attributes["href"] = $"/Home/CursusPgInfo/{inschrijving.StudentId}";
             cardButton.InnerHtml.AppendHtml("Go somewhere");
 
             return cardButton;

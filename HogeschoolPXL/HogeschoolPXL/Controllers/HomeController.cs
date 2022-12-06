@@ -1,7 +1,9 @@
 ﻿using HogeschoolPXL.Data;
 using HogeschoolPXL.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace HogeschoolPXL.Controllers
@@ -28,7 +30,16 @@ namespace HogeschoolPXL.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public async Task<IActionResult> CursusPgInfo(int? id)
+        {
+            var inschrijving = await _context.Inschrijving
+                .Where(x => x.StudentId == id)
+                .Include(x => x.vakLector).ThenInclude(x => x.Lector).ThenInclude(x => x.Gebruiker)
+                .Include(x => x.vakLector).ThenInclude(x => x.vak).ThenInclude(x => x.Handboek)
+                .FirstOrDefaultAsync();
+            return View(inschrijving);
+        }
+            [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
