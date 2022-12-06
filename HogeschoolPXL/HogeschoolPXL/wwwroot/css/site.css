@@ -84,3 +84,14 @@ body {
 .control-label{
     font-size: 20px;
 }
+.register-center {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    max-width: 95%;
+    width: auto;
+    transform: translate(-50%, 0%);
+    padding: 3%;
+    background: rgb(33, 37, 41);
+    border-radius: 5%;
+}
