@@ -9,229 +9,229 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HogeschoolPXL
 build_property.RootNamespace = HogeschoolPXL
-build_property.ProjectDir = C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\
+build_property.ProjectDir = C:\projecten c#\web\project\Project-PXl\HogeschoolPXL\HogeschoolPXL\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL
+build_property.MSBuildProjectDirectory = C:\projecten c#\web\project\Project-PXl\HogeschoolPXL\HogeschoolPXL
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/AcademieJaars/Create.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/AcademieJaars/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWVKYWFyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/AcademieJaars/Delete.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/AcademieJaars/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWVKYWFyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/AcademieJaars/Details.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/AcademieJaars/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWVKYWFyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/AcademieJaars/Edit.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/AcademieJaars/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWVKYWFyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/AcademieJaars/Index.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/AcademieJaars/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWVKYWFyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/Index.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/Login.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/Register.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/RoleChange.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Account/RoleChange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSb2xlQ2hhbmdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Create.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VicnVpa2Vyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Delete.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VicnVpa2Vyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Details.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VicnVpa2Vyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Edit.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VicnVpa2Vyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Index.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Gebruikers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VicnVpa2Vyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Create.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZGJvZWtzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Delete.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZGJvZWtzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Details.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZGJvZWtzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Edit.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZGJvZWtzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Index.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Handboeks/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZGJvZWtzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Home/CursusPgInfo.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Home/CursusPgInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDdXJzdXNQZ0luZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Home/Index.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Home/Privacy.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Create.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY2hyaWp2aW5nc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Delete.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY2hyaWp2aW5nc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Details.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY2hyaWp2aW5nc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Edit.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY2hyaWp2aW5nc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Index.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Inschrijvings/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zY2hyaWp2aW5nc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Create.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdG9yc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Delete.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdG9yc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Details.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdG9yc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Edit.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdG9yc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Index.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Lectors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdG9yc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Portfolio/Portfolio.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Portfolio/Portfolio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXFBvcnRmb2xpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/Error.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/_LoginPartial.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/_NavPage.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/_NavPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Create.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Delete.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Details.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Edit.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Index.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Students/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Create.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrTGVjdG9yc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Delete.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrTGVjdG9yc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Details.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrTGVjdG9yc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Edit.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrTGVjdG9yc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Index.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/VakLectors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrTGVjdG9yc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Create.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Delete.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Details.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Edit.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Index.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Vaks/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFrc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/_ViewImports.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/_ViewStart.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kevin/Documents/pxl_cursussen/2022-2023/c\# web projecten/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/_Layout.cshtml]
+[C:/projecten c\#/web/project/Project-PXl/HogeschoolPXL/HogeschoolPXL/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6t0xatbx0n
