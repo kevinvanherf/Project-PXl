@@ -99,6 +99,30 @@ body {
     padding: 3%;
     background: rgb(33, 37, 41);
     border-radius: 5%;
+}.info-container{
+     display: flex;
+     flex-direction:row;
+     flex-wrap:nowrap;
+
+ }
+.div-links {
+    width: 25%;
+}
+.rechts{
+    display:flex;
+    flex-direction:column;
+    width:74%;
+    border-left: solid 1px gray;
+    margin-left:30px;
+    padding-left:15px;
+    height:500px
+
+}
+.div-container{
+    display:flex;
+}
+.lector {
+    width: 100%;
 }
 @media only screen and (max-width:  1600px) {
   
