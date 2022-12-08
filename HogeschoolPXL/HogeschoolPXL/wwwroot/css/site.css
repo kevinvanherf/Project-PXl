@@ -41,10 +41,14 @@ body {
     border-radius: 5%;
 
 }
+ .lijn{
+     display:block;
+ }
 .login-container {
     color: white;
     width: 350px;
 }
+
 .input-login{
     border: none;
     width: 100%;
@@ -84,6 +88,7 @@ body {
 .control-label{
     font-size: 20px;
 }
+
 .register-center {
     position: absolute;
     top: 15%;
@@ -94,4 +99,27 @@ body {
     padding: 3%;
     background: rgb(33, 37, 41);
     border-radius: 5%;
+}
+@media only screen and (max-width:  1600px) {
+  
+    .register-center {
+        top: 5%;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        background: rgb(33 37 41 / 0%);
+        color: black;
+    }
+    .login-container {
+        color: black;
+       
+    }
+    .login-center {
+        top:20%;
+        background: rgb(33 37 41 / 0%);
+        color: black;
+    }
+     .lijn{
+         display:none;
+     }
+
 }
