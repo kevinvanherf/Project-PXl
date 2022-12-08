@@ -41,7 +41,9 @@ body {
     border-radius: 5%;
 
 }
-
+ .lijn{
+     display:block;
+ }
 .login-container {
     color: white;
     width: 350px;
@@ -99,9 +101,7 @@ body {
     border-radius: 5%;
 }
 @media only screen and (max-width:  1600px) {
-   hr{
-       display:none;
-   }
+  
     .register-center {
         top: 5%;
         margin-bottom: 5px;
@@ -118,6 +118,8 @@ body {
         background: rgb(33 37 41 / 0%);
         color: black;
     }
-     
+     .lijn{
+         display:none;
+     }
 
 }

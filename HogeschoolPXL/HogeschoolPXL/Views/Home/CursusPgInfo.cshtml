@@ -2,10 +2,19 @@
 @{
     ViewData["Title"] = "info cusrsus";
 }
+ <h1 class="text-center"> @Model.vakLector.vak.VakNaam</h1>
 <div class="col">
-    <h1 class="text-center"></h1>
+   
     <div classe="links">
-
+        <dl class="flex-column  ">
+            <dt class = "col-sm-2">
+                <h3>Lector:</h3> 
+            </dt>
+            <hr />
+            <dt class = "col-sm-2"> 
+                @Model.vakLector.Lector.Gebruiker.VoorNaam @Model.vakLector.Lector.Gebruiker.Naam
+            </dt>
+        </dl>
     </div>
     <div class="rechts">
 
