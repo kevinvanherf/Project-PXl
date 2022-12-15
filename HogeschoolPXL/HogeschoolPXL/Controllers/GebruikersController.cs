@@ -23,10 +23,11 @@ namespace HogeschoolPXL.Controllers
         }
         [Authorize(Roles =Roles.Admin)]
         // GET: Gebruikers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string Search)
         {
               return View(await _context.Gebruiker
                   .Include(x=> x.User)
+                  .Where(x => (x.VoorNaam + " " + x.Naam).Contains((Search == null) ? "" : Search))
                   .ToListAsync());
         }
         [Authorize(Roles = Roles.Admin)]

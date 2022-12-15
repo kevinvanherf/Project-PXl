@@ -1,18 +1,34 @@
-﻿@*moeten nog gefiltert worden voor lectoren en studetent apparte dingen zien zeflde voor admin 
-*@
+﻿@using HogeschoolPXL.Data.DefaultData;
+@using HogeschoolPXL.Models.ViewModels.Identity;
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<User> SignInManager
+
 @{
     ViewData["Title"] = "Home Page";
     string search = ViewBag.search;
 }
 
-
+@if (User.IsInRole(Roles.Student))
+{
     <form action="/" method="post" class="search" >
+        @Html.TextBox("search") <input class="form-control mr-sm-2" type="submit" value="search" type="search" style="width: auto;"/>
+    </form>
+    <br />
+    <h2>Cursussen : </h2>
+    <br />
+    <Student search="@search" ></Student>
+
+}
+@if (User.IsInRole(Roles.Lector))
+{
+        <form action="/" method="post" class="search" >
         @Html.TextBox("search") <input class="form-control mr-sm-2" type="submit" value="search" type="search" style="width: auto;"/>
         </form>
         <br />
         <h2>Cursussen : </h2>
         <br />
-<Student search="@search" ></Student>
-<Lector  search="@search"></Lector>
+       
+    <Lector  search="@search"></Lector>
+}
 
 

@@ -25,26 +25,6 @@ namespace HogeschoolPXL.Controllers
         // GET: Students
         public async Task<IActionResult> Index(string Search)
         {
-           
-            //var split = search.Split(' ');
-            //List<Student> studentlijst;
-            //if (split[0] != null)
-            //{
-            //    studentlijst = await _context.Student
-            //     .Include(x => x.Gebruiker).Where(x => x.Gebruiker.VoorNaam.Contains(split[0]))
-            //     .ToListAsync();
-            //}
-            //if (split[1] != null)
-            //{
-            //    var test = await _context.Student
-            //         .Include(x => x.Gebruiker).Select(x =>( x.Gebruiker.VoorNaam + " " + x.Gebruiker.Naam).Contains(search))
-            //        .ToListAsync();
-
-            //}
-
-            //studentlijst = (await _context.Student
-            //      .Include(x => x.Gebruiker)
-            //      .ToListAsync());
             return View(await _context.Student
                      .Include(x => x.Gebruiker)
                      .Where( x => (x.Gebruiker.VoorNaam + " " + x.Gebruiker.Naam).Contains((Search==null)? "" : Search))
