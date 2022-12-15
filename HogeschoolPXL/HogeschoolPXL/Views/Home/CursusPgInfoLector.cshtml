@@ -1,0 +1,65 @@
+﻿@using HogeschoolPXL.Data.DefaultData;
+@model HogeschoolPXL.Models.Inschrijving
+@{
+    ViewData["Title"] = "info cusrsus";
+    var students = ViewBag.Student;
+}
+ <h1 class="text-center"> @Model.vakLector.vak.VakNaam</h1>
+<div class="info-container">
+
+    <div class="div-links">
+        <dl class="flex-column  ">
+            <dt class = "lector">
+                <h3>Lector:</h3> 
+            </dt>
+            <hr />
+            <dt class = "lector"> 
+                @Model.vakLector.Lector.Gebruiker.VoorNaam @Model.vakLector.Lector.Gebruiker.Naam
+            </dt>
+        </dl>
+       
+                <dl class="flex-column  ">
+                    <dt class = "studenten">
+                        <h3>Lector:</h3> 
+                    </dt>
+                    <hr />
+                    <dt class = "lector"> 
+                @foreach (var student in students)
+                    {
+                    <p> @student.Gebruiker.VoorNaam   @student.Gebruiker.Naam</p>
+                }
+
+                    </dt>
+                </dl>
+        
+    </div>
+    <div class="rechts">
+
+         <dl class="row">
+                <dt class = "lector">
+                <h3>cursusinhoud:</h3> 
+            </dt>
+            <hr style="margin-top: 8px;" />
+        <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.vakLector.vak.Handboek.Titel)
+        </dt>
+        <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.vakLector.vak.Handboek.Titel)
+        </dd>
+        <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.vakLector.vak.Handboek.KostPrijs)
+        </dt>
+        <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.vakLector.vak.Handboek.KostPrijs)
+        </dd>
+        <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.vakLector.vak.StudiePunten)
+        </dt>
+        <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.vakLector.vak.StudiePunten)
+        </dd>
+
+    </dl>
+    </div>
+</div>
+

@@ -39,7 +39,21 @@ namespace HogeschoolPXL.Controllers
                 .FirstOrDefaultAsync();
             return View(inschrijving);
         }
-            [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public async Task<IActionResult> CursusPgInfoLector(int? id)
+        {
+            ViewData["Student"] = await _context.Inschrijving
+                .Where(x => x.VakLectorId == id)
+                .Include(x => x.Student).ThenInclude(x => x.Gebruiker)
+                .Select(x => x.Student)
+                .ToListAsync(); ;
+            var inschrijving = await _context.Inschrijving
+                .Where(x => x.VakLectorId == id)
+                .Include(x => x.vakLector).ThenInclude(x => x.Lector).ThenInclude(x => x.Gebruiker)
+                .Include(x => x.vakLector).ThenInclude(x => x.vak).ThenInclude(x => x.Handboek)
+                .FirstOrDefaultAsync();
+            return View(inschrijving);
+        }
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
