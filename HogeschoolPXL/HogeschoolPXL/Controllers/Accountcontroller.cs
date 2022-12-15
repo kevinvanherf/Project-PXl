@@ -63,28 +63,37 @@ namespace HogeschoolPXL.Controllers
                 identityUser.LastName = user.LastName;
                 identityUser.Email = user.Email;
                 identityUser.UserName = user.Username;
-                
-                var identityResult = await _userManager.CreateAsync(identityUser, user.Password);
-                if (identityResult.Succeeded)
+                if (emailcontroleren(identityUser))
                 {
-                    
-                    var roleResult = await _userManager.AddToRoleAsync(identityUser, Roles.NwGebruiker);
-                    if (roleResult.Succeeded)
-                        return View("Login");
-                    else
+
+
+                    var identityResult = await _userManager.CreateAsync(identityUser, user.Password);
+                    if (identityResult.Succeeded)
                     {
-                        ModelState.AddModelError("", "Problemen met toekennen van rol!");
-                        return View();
+
+                        var roleResult = await _userManager.AddToRoleAsync(identityUser, Roles.NwGebruiker);
+                        if (roleResult.Succeeded)
+                            return View("Login");
+                        else
+                        {
+                            ModelState.AddModelError("", "Problemen met toekennen van rol!");
+                            return View(user);
+                        }
+                    }
+
+
+                    foreach (var errors in identityResult.Errors)
+                    {
+                        ModelState.AddModelError("", errors.Description);
                     }
                 }
-                    
-
-                foreach (var errors in identityResult.Errors)
+                else
                 {
-                    ModelState.AddModelError("", errors.Description);
+                    ModelState.AddModelError("", "het email is al in gebruik je moet een andere nemen!");
+                    return View(user);
                 }
             }
-            return View();
+                return View(user);
         }
         #endregion
         #region Logout 
@@ -198,6 +207,23 @@ namespace HogeschoolPXL.Controllers
                 return RedirectToAction(nameof(RoleChange));
             }
             return View(user);
+        }
+        #endregion
+        #region controle methodes 
+
+        public bool emailcontroleren(User user)
+        {
+            bool toegang = true;
+            var accaunts = _context.Users.ToList();
+            foreach (var accaount in accaunts)
+            {
+                if (accaount.Email == user.Email)
+                {
+                    toegang = false;
+                    break;
+                }
+            }
+            return toegang;
         }
         #endregion
 
