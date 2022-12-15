@@ -3,15 +3,15 @@
     ViewData["Title"] = "info cusrsus";
 }
  <h1 class="text-center"> @Model.vakLector.vak.VakNaam</h1>
-<div class="col">
+<div class="info-container">
    
-    <div classe="links">
+    <div class="div-links">
         <dl class="flex-column  ">
-            <dt class = "col-sm-2">
+            <dt class = "lector">
                 <h3>Lector:</h3> 
             </dt>
             <hr />
-            <dt class = "col-sm-2"> 
+            <dt class = "lector"> 
                 @Model.vakLector.Lector.Gebruiker.VoorNaam @Model.vakLector.Lector.Gebruiker.Naam
             </dt>
         </dl>
@@ -19,6 +19,10 @@
     <div class="rechts">
 
          <dl class="row">
+                <dt class = "lector">
+                <h3>cursusinhoud:</h3> 
+            </dt>
+            <hr style="margin-top: 8px;" />
         <dt class = "col-sm-2">
                 @Html.DisplayNameFor(model => model.vakLector.vak.Handboek.Titel)
         </dt>
