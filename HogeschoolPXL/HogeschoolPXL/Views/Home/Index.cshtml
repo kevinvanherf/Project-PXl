@@ -30,5 +30,17 @@
        
     <Lector  search="@search"></Lector>
 }
+@if (User.IsInRole(Roles.Admin))
+{
+    <p>kijk bij accounts als er iemand new is die een account nodig heeft </p>
+}
+@if (User.IsInRole(Roles.NwGebruiker))
+{
+        <p>
+            hello. 
+            Je kunt nog nieks doen u moet wachten dat u bent ingeschreven in de school dit kan effe duren. 
+            Bedankt voor ons begrip 
+        </p>
+}
 
 
