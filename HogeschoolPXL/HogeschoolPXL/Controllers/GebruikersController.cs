@@ -9,6 +9,7 @@ using HogeschoolPXL.Data;
 using HogeschoolPXL.Models;
 using Microsoft.AspNetCore.Authorization;
 using HogeschoolPXL.Data.DefaultData;
+using HogeschoolPXL.Models.ViewModels.Identity;
 
 namespace HogeschoolPXL.Controllers
 {
@@ -21,6 +22,7 @@ namespace HogeschoolPXL.Controllers
         {
             _context = context;
         }
+        #region view actions
         [Authorize(Roles =Roles.Admin)]
         // GET: Gebruikers
         public async Task<IActionResult> Index(string Search)
@@ -81,7 +83,8 @@ namespace HogeschoolPXL.Controllers
             {
                 return NotFound();
             }
-            ViewData["Users"] = _context.Users.Select(x => new SelectListItem { Text = $"{x.FirstName} {x.LastName}", Value = x.Id });
+            list();
+            //ViewData["Users"] = _context.Users.Select(x => new SelectListItem { Text = $"{x.FirstName} {x.LastName}", Value = x.Id });
 
             var gebruiker = await _context.Gebruiker.FindAsync(id);
             if (gebruiker == null)
@@ -96,18 +99,21 @@ namespace HogeschoolPXL.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("GebruikerId,Naam,VoorNaam,Email,UserId")] Gebruiker gebruiker)
+        public async Task<IActionResult> Edit(int id,  Gebruiker gebruiker)
         {
+           
             if (id != gebruiker.GebruikerId)
             {
-                return NotFound();
+             return NotFound();
             }
+
+
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(gebruiker);
+                    _context.Gebruiker.Update(gebruiker);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -123,6 +129,9 @@ namespace HogeschoolPXL.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
+
+            list();
             return View(gebruiker);
         }
         [Authorize(Roles = Roles.Admin)]
@@ -163,9 +172,41 @@ namespace HogeschoolPXL.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
         private bool GebruikerExists(int id)
         {
           return _context.Gebruiker.Any(e => e.GebruikerId == id);
         }
+        #endregion
+        #region controle methodes
+        public void list()
+        {
+
+            var lijst = _context.Users.Select(x => new SelectListItem { Text = $"{x.FirstName} {x.LastName}", Value = x.Id });
+            
+            ViewData["Users"] = lijst;
+        }
+        public bool useridcontrole(Gebruiker gebruiker)
+        {
+            bool controle = true;
+            var gebruikers = _context.Gebruiker.ToList();
+            foreach (var gb in gebruikers)
+            {
+                if (gb.GebruikerId == gebruiker.GebruikerId)
+                {
+                    if (gb.UserId == gebruiker.UserId)
+                    {
+                        break;
+                    }
+                }
+                if (_context.Gebruiker.Any(e => e.UserId== gebruiker.UserId))
+                {
+                    controle= false;
+                    break;
+                }
+            }
+            return controle;
+        }
+        #endregion
     }
 }
