@@ -4,8 +4,11 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
+<h1>studente lijst</h1>
+<br />
+<form action="/Students/Index" method="get" class="search" >
+    @Html.TextBox("Search") <input class="form-control mr-sm-2" type="submit" value="Search" type="Search" style="width: auto;"/>
+        </form>
 <p>
     <a asp-action="Create">Create New</a>
 </p>
