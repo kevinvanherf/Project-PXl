@@ -78,6 +78,11 @@ namespace HogeschoolPXL.Controllers
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
+                else
+                {
+                    ModelState.AddModelError("", "de user kan je niet toe kennen deze is al gekopeld aan ieamand anders!");
+                    return View(gebruiker);
+                }
             }
             return View(gebruiker);
         }
