@@ -6,8 +6,8 @@
 
 <h1>lijst van gebruikers</h1>
 <br />
-<form action="/Gebruikers/Index" method="get" class="search" >
-    @Html.TextBox("Search") <input class="form-control mr-sm-2" type="submit" value="Search" type="Search" style="width: auto;"/>
+<form  asp-action="Index" method="get" class="search" >
+  <p class="midden">Naam: </p>   @Html.TextBox("Search") <input class="form-control mr-sm-2" type="submit" value="Search" type="Search" style="width: auto;"/>
  </form>
 <br />
 <p>

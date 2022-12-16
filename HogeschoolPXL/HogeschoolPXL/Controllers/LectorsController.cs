@@ -20,10 +20,11 @@ namespace HogeschoolPXL.Controllers
         }
 
         // GET: Lectors
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string Search)
         {
             return View(await _context.Lector
                 .Include(x=> x.Gebruiker)
+                .Where(x => (x.Gebruiker.VoorNaam + " " + x.Gebruiker.Naam).Contains((Search == null) ? "" : Search))
                 .ToListAsync()) ;
         }
 

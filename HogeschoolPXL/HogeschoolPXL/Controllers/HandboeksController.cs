@@ -23,9 +23,10 @@ namespace HogeschoolPXL.Controllers
         }
         [Authorize(Roles  = $"{Roles.Admin} , {Roles.Lector}")]
         // GET: Handboeks
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string Search)
         {
-              return View(await _context.Handboek.ToListAsync());
+            return View(await _context.Handboek.Where(x => x.Titel.Contains((Search == null)? "": Search))
+            .ToListAsync());
         }
         [Authorize(Roles = Roles.Admin)]
         // GET: Handboeks/Details/5

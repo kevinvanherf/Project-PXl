@@ -22,9 +22,12 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
     grid-column-gap: 1.875rem;
 }
+p.midden{
+    margin:5px;
+}
 .search {
     display: flex;
-
+    margin: 0px 0;
 }
 .login-center {
     /*display:flex;*/
