@@ -55,7 +55,8 @@ namespace HogeschoolPXL.Controllers
         // GET: Gebruikers/Create
         public IActionResult Create()
         {
-            ViewData["Users"] = _context.Users.Select(x => new SelectListItem {Text = $"{x.FirstName} {x.LastName}" , Value= x.Id });
+            //ViewData["Users"] = _context.Users.Select(x => new SelectListItem {Text = $"{x.FirstName} {x.LastName}" , Value= x.Id });
+            list();
             return View();
         }
 
@@ -69,9 +70,14 @@ namespace HogeschoolPXL.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(gebruiker);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (useridcontrole( gebruiker))
+                {
+
+
+                    _context.Add(gebruiker);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
             return View(gebruiker);
         }
