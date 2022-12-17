@@ -44,7 +44,7 @@
                 @Html.DisplayFor(modelItem => item.UitgifteDatum)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Afbeelding)
+                    <img class="groteImg" src="@item.Afbeelding">
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.HandboekID">Edit</a> |

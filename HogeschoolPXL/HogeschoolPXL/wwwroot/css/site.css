@@ -29,6 +29,9 @@ p.midden{
     display: flex;
     margin: 0px 0;
 }
+.groteImg{
+    height:50px
+}
 .login-center {
     /*display:flex;*/
     /*flex-direction: column;*/
