@@ -24,14 +24,15 @@ namespace HogeschoolPXL.Controllers
         }
         [Authorize(Roles = Roles.Admin)]
         // GET: Inschrijvings
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string Search)
         {
-              return View(await _context.Inschrijving
-                  .Include(x=> x.academieJaar)
-                  .Include(x => x.vakLector).ThenInclude(v => v.vak)
-                  .Include(x => x.vakLector).ThenInclude(v => v.Lector).ThenInclude(l => l.Gebruiker)
-                  .Include(x=> x.Student).ThenInclude(s => s.Gebruiker)
-                  .ToListAsync());
+            return View(await _context.Inschrijving
+                .Include(x => x.academieJaar)
+                .Include(x => x.vakLector).ThenInclude(v => v.vak)
+                .Include(x => x.vakLector).ThenInclude(v => v.Lector).ThenInclude(l => l.Gebruiker)
+                .Include(x => x.Student).ThenInclude(s => s.Gebruiker)
+                .Where(x => (x.Student.Gebruiker.VoorNaam + " " + x.Student.Gebruiker.Naam + "" + x.vakLector.Lector.Gebruiker.VoorNaam + " " + x.vakLector.Lector.Gebruiker.Naam + " " + x.vakLector.vak.VakNaam + " " + x.academieJaar.StartDatum).Contains((Search == null) ? "" : Search))
+                .ToListAsync()) ;
         }
         [Authorize(Roles = Roles.Admin)]
         // GET: Inschrijvings/Details/5
