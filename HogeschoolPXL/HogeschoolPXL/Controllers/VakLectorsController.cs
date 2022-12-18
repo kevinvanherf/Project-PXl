@@ -20,11 +20,12 @@ namespace HogeschoolPXL.Controllers
         }
 
         // GET: VakLectors
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string Search)
         {
               return View(await _context.VakLector
                   .Include(l=> l.Lector).ThenInclude(l=> l.Gebruiker)
                   .Include(l=>l.vak)
+                  .Where(x => ( x.Lector.Gebruiker.VoorNaam + " " + x.Lector.Gebruiker.Naam + " " + x.vak.VakNaam ).Contains((Search == null) ? "" : Search))
                   .ToListAsync());
         }
 
