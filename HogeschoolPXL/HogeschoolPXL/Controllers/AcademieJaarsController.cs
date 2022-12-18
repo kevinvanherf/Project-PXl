@@ -22,7 +22,9 @@ namespace HogeschoolPXL.Controllers
         // GET: AcademieJaars
         public async Task<IActionResult> Index()
         {
-              return View(await _context.AcademieJaar.ToListAsync());
+            
+            var vieuw = await _context.AcademieJaar.OrderBy(x=> x.StartDatum).ToListAsync();
+            return View(vieuw);
         }
 
         // GET: AcademieJaars/Details/5

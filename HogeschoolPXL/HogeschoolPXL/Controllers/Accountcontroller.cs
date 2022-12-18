@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System.Data;
 
 namespace HogeschoolPXL.Controllers
@@ -107,7 +108,7 @@ namespace HogeschoolPXL.Controllers
         #endregion
         #region Role Change
         [Authorize(Roles = Roles.Admin)]
-        public async Task<IActionResult> index()
+        public async Task<IActionResult> index(string Search)
         {
            var userss = new List<IdentityViewModel>();
             
@@ -128,7 +129,7 @@ namespace HogeschoolPXL.Controllers
 
 
 
-            return View(userss);
+            return View(userss.Where(x => (x.FirstName + " " + x.LastName + " " + x.Username + " " + x.Email + " " + x.Roles.Name ).Contains((Search == null) ? "" : Search)));
         }
         [Authorize (Roles = Roles.Admin)]
         [HttpGet]

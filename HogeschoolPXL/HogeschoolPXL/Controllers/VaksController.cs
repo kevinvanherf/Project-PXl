@@ -26,10 +26,11 @@ namespace HogeschoolPXL.Controllers
         }
         [Authorize(Roles =$"{Roles.Admin} , {Roles.Student}, {Roles.Lector}")]
         // GET: Vaks
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string Search)
         {
               return View(await _context.Vak
                   .Include(x=> x.Handboek)
+                  .Where(x => (x.VakNaam + " " + x.StudiePunten + " " + x.Handboek.Titel).Contains((Search == null) ? "" : Search))
                   .ToListAsync());
         }
         [Authorize(Roles = Roles.Admin)]
