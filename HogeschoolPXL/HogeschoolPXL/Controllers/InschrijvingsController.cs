@@ -10,6 +10,7 @@ using HogeschoolPXL.Models;
 using System.Collections.Immutable;
 using HogeschoolPXL.Data.DefaultData;
 using Microsoft.AspNetCore.Authorization;
+using System.Net.NetworkInformation;
 
 namespace HogeschoolPXL.Controllers
 {
@@ -56,14 +57,8 @@ namespace HogeschoolPXL.Controllers
         // GET: Inschrijvings/Create
         public IActionResult Create()
         {
-            var studentSelect = _context.Student.Where(x => x.GebruikerId == x.Gebruiker.GebruikerId)
-                .Select(x => new SelectListItem { Text = $"{x.Gebruiker.VoorNaam} {x.Gebruiker.Naam}", Value= x.StudentId.ToString() }); 
-            var VaklectorSelect = _context.VakLector.Where(_x => _x.VakId == _x.vak.VakId)
-                .Select(_x => new SelectListItem { Text = $"{_x.vak.VakNaam} - {_x.Lector.Gebruiker.VoorNaam} {_x.Lector.Gebruiker.Naam}" , Value = _x.VakLectorId.ToString() });
-            ViewData["VakLector"] = VaklectorSelect;
-            ViewData["Student"] = studentSelect;
-            ViewBag.AcademiJaar = new SelectList(_context.AcademieJaar, "AcademieJaarId", "StartDatum");
-            //ViewBag.VakLector = new SelectList(_context.VakLector, "vakLectorId", "VakId");
+            lijst(); // laat de viewdata in voor later te kunne gebruiken voor te selecteren 
+
             return View();
         }
 
@@ -72,14 +67,27 @@ namespace HogeschoolPXL.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        
         public async Task<IActionResult> Create([Bind("InschrijvingId,StudentId,VakLectorId,AcademieJaarId")] Inschrijving inschrijving)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(inschrijving);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (!NietDubbel(inschrijving)) 
+                { 
+                    _context.Add(inschrijving);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                else 
+                {
+                    ModelState.AddModelError("", "Je kunt geen leerling twee keeer voor de zelfde vak met het zelfde jaar zetten opnieuw . Sorry error ");
+                    lijst();
+                    return View(inschrijving);
+                }
+               
             }
+
+            lijst();
             return View(inschrijving);
         }
         [Authorize(Roles = Roles.Admin)]
@@ -175,5 +183,35 @@ namespace HogeschoolPXL.Controllers
         {
           return _context.Inschrijving.Any(e => e.InschrijvingId == id);
         }
+        public void lijst()
+        {
+            var studentSelect = _context.Student.Where(x => x.GebruikerId == x.Gebruiker.GebruikerId)
+               .Select(x => new SelectListItem { Text = $"{x.Gebruiker.VoorNaam} {x.Gebruiker.Naam}", Value = x.StudentId.ToString() });
+            var VaklectorSelect = _context.VakLector.Where(_x => _x.VakId == _x.vak.VakId)
+                .Select(_x => new SelectListItem { Text = $"{_x.vak.VakNaam} - {_x.Lector.Gebruiker.VoorNaam} {_x.Lector.Gebruiker.Naam}", Value = _x.VakLectorId.ToString() });
+            ViewData["VakLector"] = VaklectorSelect;
+            ViewData["Student"] = studentSelect;
+            ViewBag.AcademiJaar = new SelectList(_context.AcademieJaar, "AcademieJaarId", "StartDatum");// select list makane voor de academie jaar te kunnen selecteren 
+                                                                                                        //ViewBag.VakLector = new SelectList(_context.VakLector, "vakLectorId", "VakId"); 
+
+        }
+
+        private bool NietDubbel(Inschrijving inschrijving)
+        {
+            bool exists = false;
+            var waardes  = _context.Inschrijving.Where(x=> x.StudentId ==inschrijving.StudentId);
+            foreach (var student in waardes)
+            {
+                if (student.VakLectorId==inschrijving.VakLectorId && student.AcademieJaarId == inschrijving.AcademieJaarId)
+                {
+                    exists= true;
+                }
+            }
+           
+
+            return exists;
+        }
+
     }
+
 }
