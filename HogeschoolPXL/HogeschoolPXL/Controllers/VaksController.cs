@@ -69,13 +69,47 @@ namespace HogeschoolPXL.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(vak);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if(!BoekInGebruiker(vak.HandboekID)&& !VakNaamIngebruik(vak.VakNaam)){
+                    _context.Add(vak);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    ModelState.AddModelError("", "het boek is al in gerbuik of de naam is al in gebruik!!");
+                    ViewBag.Boek = new SelectList(_context.Handboek, "HandboekID", "Titel");
+                    return View(vak);
+                }
             }
             ViewBag.Boek = new SelectList(_context.Handboek, "HandboekID", "Titel");
             return View(vak);
         }
+        #region creta controle
+        // controle voor te kijken dat het boek niet al gebruikt word bij het vak 
+        public bool BoekInGebruiker(int? id)
+        {
+            var controle = false;
+            if (_context.Vak.Any(x=> x.HandboekID == id))
+            {
+                controle = true;
+            }
+
+            return controle;
+
+        }
+        // controle als de vaknaam niet in gebruik is 
+        public bool VakNaamIngebruik(string naam)
+        {
+            var controle = false;
+            if (_context.Vak.Any(x => x.VakNaam.ToLower() == naam.ToLower()))
+            {
+                controle = true;
+            }
+
+            return controle;
+
+        }
+        #endregion
         [Authorize(Roles = Roles.Admin)]
         // GET: Vaks/Edit/5
         public async Task<IActionResult> Edit(int? id)
