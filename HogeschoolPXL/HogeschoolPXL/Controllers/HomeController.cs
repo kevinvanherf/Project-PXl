@@ -1,5 +1,6 @@
 ﻿using HogeschoolPXL.Data;
 using HogeschoolPXL.Models;
+using HogeschoolPXL.Views.Portfolio;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -23,6 +24,12 @@ namespace HogeschoolPXL.Controllers
         {
             ViewData["search"]= search;
             return View(_context.Inschrijving.ToList());
+        }
+        public IActionResult Portfolio()
+        {
+            var model = new PortfolioModel();
+           
+            return View(model);
         }
 
         public IActionResult Privacy()
