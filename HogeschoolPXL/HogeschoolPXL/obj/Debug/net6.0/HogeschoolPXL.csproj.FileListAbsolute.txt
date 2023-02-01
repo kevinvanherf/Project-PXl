@@ -577,3 +577,4 @@ C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\Ho
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\kevin\Documents\pxl_cursussen\2022-2023\c# web projecten\Project-PXl\HogeschoolPXL\HogeschoolPXL\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll

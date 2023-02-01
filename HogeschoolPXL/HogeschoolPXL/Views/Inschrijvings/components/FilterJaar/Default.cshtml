@@ -1,0 +1,14 @@
+﻿@model IEnumerable<AcademieJaar>
+
+@{
+	var items = ViewBag.jaar;
+	
+}
+ <a class="btn btn-primary" asp-action="Index" asp-controller="Inschrijvings" >alles</a>
+@foreach (var jar in Model)
+{
+				<a class="btn btn-primary" asp-action="Index" asp-controller="Inschrijvings" asp-route-Jaarid="@jar.AcademieJaarId">@jar.StartDatum</a>
+			
+}
+<p>het werkt  </p>
+
