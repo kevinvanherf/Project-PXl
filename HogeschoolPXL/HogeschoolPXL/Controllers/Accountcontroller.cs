@@ -68,11 +68,11 @@ namespace HogeschoolPXL.Controllers
                 {
 
 
-                    var identityResult = await _userManager.CreateAsync(identityUser, user.Password);
+                    var identityResult = await _userManager.CreateAsync(identityUser, user.Password); // create een accoutn 
                     if (identityResult.Succeeded)
                     {
 
-                        var roleResult = await _userManager.AddToRoleAsync(identityUser, Roles.NwGebruiker);
+                        var roleResult = await _userManager.AddToRoleAsync(identityUser, Roles.NwGebruiker); // geeft dat accoutn een roll
                         if (roleResult.Succeeded)
                             return View("Login");
                         else

@@ -10,9 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<HogeschoolPXLDbContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("HogeSchoolConnection"));
+    opts.UseSqlServer(builder.Configuration.GetConnectionString("HogeSchoolConnection")); // voor de database
 });
-builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<HogeschoolPXLDbContext>();
+builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<HogeschoolPXLDbContext>();// voor identity
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
